@@ -1,23 +1,39 @@
 /*
  * @Author: liu
- * @Date: 2020-07-09 09:30
+ * @Date: 2021-04-08
  * @LastEditors: Do not edit
  * @LastEditTime: 
  * @Description: file content
- * @FilePath: /multi-master-tool/id-increment/id.proto
+ * @FilePath: /Percona-tool/id-increment/id.proto
  */
-
+ 
 syntax="proto2";
 package IDIncrement;
 
 option cc_generic_services = true;
 
 message IDRequest {
-      required string message = 1;
+      required string page_table_no = 1;
+      required string brpc_address = 2;
+};
+
+message PartMessage {
+      required int32 part_version = 1;
+      repeated string part_address = 2;
+};
+
+message LogMessage {
+      repeated int64 lsn = 1;
 };
 
 message IDResponse {
-      required string message = 1;
+      required int64 g_id = 1;
+      required int64 s_id = 2;
+      required int64 m_id = 3;
+      map<int32, PartMessage> either_part_message = 4;
+      required PartMessage own_part_message = 5;
+      map<int32,LogMessage> partition_alloc_lsn = 6;
+      
 };
 
 service IDService {

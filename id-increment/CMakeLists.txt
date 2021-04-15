@@ -92,9 +92,14 @@ set(BRPC_LINK_LIB
 
 find_package(Protobuf REQUIRED)
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS id.proto)
+# execute_process(COMMAND bash "-c" "rm *.cc *.h && protoc ./id.proto --cpp_out=./"
+# 	WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+# 	)
 
 add_executable(client client.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 add_executable(server server.cpp ${PROTO_SRCS} ${PROTO_HDRS})
+# add_executable(client client.cpp)
+# add_executable(server server.cpp)
 
 target_link_libraries(client  ${BRPC_LINK_LIB})
 target_link_libraries(server  ${BRPC_LINK_LIB})
