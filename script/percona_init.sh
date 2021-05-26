@@ -4,6 +4,8 @@
 ###
 
 source /home/wxliu/Percona/script/build.sh
+rm -rf ~/mysql_out_50/percona_22303/data/*
+rm ~/mysql_out_50/percona_22303/percona_error.log
 
 $BUILD_PATH/bin/mysqld --defaults-file=/home/wxliu/mysql_out_50/percona_22303.conf --initialize --multi_master_log_plugin=OFF
 
