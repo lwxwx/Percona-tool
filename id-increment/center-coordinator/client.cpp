@@ -33,7 +33,7 @@ void HandleIDcreResponse(brpc::Controller* cntl,IDIncrement::IDResponse* respons
         cout << "Fail to send EchoRequest, " << cntl->ErrorText()<<endl;
         return;
     }
-    cout << "----------------------" << endl;
+    cout << "---------------------- part id = " << response->part_id() << endl;
     cout<<"id = "<<response->g_id()<< " " << response->s_id() << " " <<response->m_id() << endl;
 
     cout << "own part version = " << response->own_part_message().part_version() << " , own part address : ";

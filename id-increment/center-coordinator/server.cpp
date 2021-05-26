@@ -24,7 +24,7 @@ using namespace std;
 DEFINE_int32(port, 60006, "TCP Port of this server");
 DEFINE_int32(idle_timeout_s, -1, "Connection will be closed if there is no read/write operations during the last `idle_timeout_s'");
 
-long long g_id = 0, s_id = 0, m_id = 0; // global LSN / sinple LSN / multi LSN
+long long /*g_id = 0,*/ s_id = 0, m_id = 0; // global LSN / sinple LSN / multi LSN
 map < long long, string > idmap;
 mutex id_lock;
 map < int, mutex > part_lock; //partID --> lock
@@ -32,6 +32,7 @@ map < int, pair< int , set < string > > > partition_message;//partID + part_vers
 map < int, set <long long > > total_partition_lsn_message;//partID + global_LSNs
 map < int, set <long long > > send_partition_lsn_message;//partID + global_LSNs (latest message)
 map < string, int > address_part;//address belong to which partition 
+int part_id;
 
 
 class IDIncreImpl : public IDIncrement::IDService {
@@ -50,13 +51,14 @@ public:
         IDIncrement::LogMessage* logMess = new IDIncrement::LogMessage;
 
         lock_guard<mutex> guard(id_lock);
-        g_id++;
-        response->set_g_id(g_id);
+        // g_id++;
+        // response->set_g_id(g_id);
         // lock_guard< mutex > guard(part_lock[address_part[ip_address.str()]]);
         // int part_id = address_part[ip_address.str()];
-        int part_id = address_part[request->brpc_address()];
+        // int part_id = address_part[request->brpc_address()];
         int s_id = total_partition_lsn_message[part_id].size() + 1;
         int m_id = 0;
+        response->set_part_id(part_id);
         //TODO: s_id 和 m_id要不要size+1 取决于mysql里面找空洞是从 1 还是 0 开始找的
         
         cout<<"Received request from " << cntl->remote_side() << " to " << cntl->local_side()<< ": " << request->page_table_no()<<" ,allot id: "<<g_id<< endl;//" ,time:"<<dt<<endl;
@@ -119,6 +121,8 @@ int main(int argc, char* argv[]) {
     partition_message[0].second.insert("10.11.6.121:22595");
     address_part["10.11.6.117:22595"] = 1;
     address_part["10.11.6.121:22595"] = 0;
+    part_id = (int)argv[1];
+    cout << "part id = " << part_id;
 
     google::ParseCommandLineFlags(&argc, &argv, true);
 

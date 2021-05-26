@@ -17,6 +17,7 @@ message IDRequest {
       required string brpc_address = 2;
 };
 
+
 message PartMessage {
       required int32 part_version = 1;
       repeated string part_address = 2;
@@ -27,12 +28,13 @@ message LogMessage {
 };
 
 message IDResponse {
-      required int64 g_id = 1;
-      required int64 s_id = 2;
-      required int64 m_id = 3;
-      map<int32, PartMessage> either_part_message = 4;
-      required PartMessage own_part_message = 5;
-      map<int32,LogMessage> partition_alloc_lsn = 6;
+      //required int64 g_id = 1;
+      required int32 part_id = 4;//分区序号
+      required int64 s_id = 2;//单分区id
+      required int64 m_id = 3;//跨分区id
+      map<int32, PartMessage> either_part_message = 5;//其他分区的服务器地址
+      required PartMessage own_part_message = 6;//本分区的服务器地址
+      map<int32,LogMessage> partition_alloc_lsn = 7;//其他分区的最新lsn
       
 };
 

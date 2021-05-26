@@ -1,0 +1,28 @@
+/*
+ * @Author: liu
+ * @Date: 2021-04-08
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2021-05-26
+ * @Description: file content
+ * @FilePath: /Percona-tool/id-increment/part-coordinator/coorMess.proto
+ */
+ 
+ syntax="proto2";
+ package CoorMessage;
+ 
+ option cc_generic_services = true;
+ 
+ message CoorRequest {//跨分区事务通知单分区修改M-TSN
+       required int64 m_id = 1;
+ };
+ 
+ message CoorResponse {//单分区事务回复跨分区事务最新事务序号
+       required int32 part_id = 1;
+       required int64 s_id = 2;
+       required int64 m_id = 3;
+ };
+ 
+ service CoorService {
+       rpc CoorMess(CoorRequest) returns (CoorResponse);
+ };
+ 
