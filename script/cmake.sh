@@ -3,7 +3,7 @@
  # @Date: 2021-03-19
 ###
 
-source /home/wxliu/Percona/script/build.sh
+source $( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )/build.sh
 
 echo "build_path = $BUILD_PATH"
 
@@ -16,8 +16,8 @@ fi
 
 cd $BUILD_PATH
 
-# cmake ${ROOT_PATH}/percona-server/  -DDOWNLOAD_BOOST=1  -DWITH_BOOST=${ROOT_PATH}/boost_1_70_0/ -DWITHOUT_TOKUDB=1  -DWITHOUT_ROCKSDB=1 -DENABLE_DOWNLOADS=1  -DWITH_MYSQLX=OFF  -DWITH_GROUP_REPLICATION=OFF -DCMAKE_INSTALL_PREFIX=${BUILD_DIR}/../build-install -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-cmake ${ROOT_PATH}/percona-server/ -DCMAKE_PREFIX_PATH="/home/wxliu/Percona/brpc_env/protobuf-install/lib64;/home/wxliu/Percona/brpc_env/gflags-install/lib;/home/wxliu/local/ENV/openssl-install/lib" -DCMAKE_INCLUDE_PATH="/home/wxliu/local/ENV/openssl-install/include;/home/wxliu/Percona/brpc_env/gflags-install/include;/home/wxliu/Percona/brpc_env/protobuf-install/include" -DCMAKE_LIBRARY_PATH="/home/wxliu/Percona/brpc_env/protobuf-install/lib64;/home/wxliu/Percona/brpc_env/gflags-install/lib;/home/wxliu/local/ENV/openssl-install/lib" -DDOWNLOAD_BOOST=1  -DWITH_BOOST=${ROOT_PATH}/boost_1_70_0/ -DWITHOUT_TOKUDB=1  -DWITHOUT_ROCKSDB=1 -DENABLE_DOWNLOADS=1  -DWITH_MYSQLX=OFF  -DWITH_GROUP_REPLICATION=OFF -DCMAKE_INSTALL_PREFIX=${BUILD_DIR}/../build-install -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+cmake ${ROOT_PATH}/percona-server/  -DDOWNLOAD_BOOST=1  -DWITH_BOOST=${ROOT_PATH}/boost_1_70_0/ -DWITHOUT_TOKUDB=1  -DWITHOUT_ROCKSDB=1 -DENABLE_DOWNLOADS=1  -DWITH_MYSQLX=OFF  -DWITH_GROUP_REPLICATION=OFF -DCMAKE_INSTALL_PREFIX=${BUILD_DIR}/../build-install -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
 
 
 # cmake 
