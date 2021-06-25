@@ -1,7 +1,7 @@
-set(CMAKE_C_COMPILER "/home/liuwenxin/local/ENV/clang+llvm/bin/clang")
+set(CMAKE_C_COMPILER "/usr/bin/cc")
 set(CMAKE_C_COMPILER_ARG1 "")
-set(CMAKE_C_COMPILER_ID "Clang")
-set(CMAKE_C_COMPILER_VERSION "10.0.0")
+set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_VERSION "8.3.1")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "11")
@@ -12,19 +12,16 @@ set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")
 
 set(CMAKE_C_PLATFORM_ID "Linux")
 set(CMAKE_C_SIMULATE_ID "")
-set(CMAKE_C_COMPILER_FRONTEND_VARIANT "GNU")
 set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-
 set(CMAKE_AR "/usr/bin/ar")
-set(CMAKE_C_COMPILER_AR "/home/liuwenxin/local/ENV/clang+llvm/bin/llvm-ar")
+set(CMAKE_C_COMPILER_AR "/usr/bin/gcc-ar")
 set(CMAKE_RANLIB "/usr/bin/ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/home/liuwenxin/local/ENV/clang+llvm/bin/llvm-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "/usr/bin/gcc-ranlib")
 set(CMAKE_LINKER "/usr/bin/ld")
-set(CMAKE_MT "")
-set(CMAKE_COMPILER_IS_GNUCC )
+set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
 set(CMAKE_C_COMPILER_WORKS TRUE)
 set(CMAKE_C_ABI_COMPILED TRUE)
@@ -71,7 +68,6 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/home/liuwenxin/Percona/brpc_env/gflags-install/include;/home/liuwenxin/Percona/brpc_env/leveldb-install/include;/home/liuwenxin/Percona/brpc_env/protobuf-install/include;/usr/local/include;/home/liuwenxin/local/ENV/clang+llvm/lib/clang/10.0.0/include;/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7;/opt/rh/devtoolset-7/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-7/root/usr/lib;/home/liuwenxin/local/ENV/clang+llvm/lib;/lib;/usr/lib;/home/liuwenxin/Percona/brpc_env/openssl_1_0_2k-install/lib;/home/liuwenxin/Percona/brpc_env/gflags-install/lib;/home/liuwenxin/Percona/brpc_env/leveldb-install/lib64;/home/liuwenxin/Percona/brpc_env/protobuf-install/lib64")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64;/usr/lib/gcc/x86_64-redhat-linux/8;/usr/lib64;/lib64;/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib;/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib;/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

@@ -1,13 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/client.dir/client.cpp.o"
   "CMakeFiles/client.dir/coorMess.pb.cc.o"
+  "CMakeFiles/client.dir/coor_server.cc.o"
   "CMakeFiles/client.dir/id.pb.cc.o"
-  "client"
   "client.pdb"
-  "coorMess.pb.cc"
-  "coorMess.pb.h"
-  "id.pb.cc"
-  "id.pb.h"
+  "client"
 )
 
 # Per-language clean rules from dependency scanning.

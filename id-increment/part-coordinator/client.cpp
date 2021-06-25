@@ -10,113 +10,79 @@
 #include <gflags/gflags.h>
 #include <butil/time.h>
 #include <brpc/channel.h>
-#include "./build/id.pb.h"
-#include "./build/coorMess.pb.h"
+#include "id.pb.h"
+#include "coorMess.pb.h"
+#include "coor_server.h"
 #include <iostream>
 #include <ctime>
-using namespace std;
+#include <stdio.h>
+#include <thread>
+#include <unistd.h>
 
-DEFINE_string(protocol, "baidu_std", "Protocol type. Defined in src/brpc/options.proto");
-DEFINE_string(connection_type, "", "Connection type. Available values: single, pooled, short");
-DEFINE_string(server, "10.11.6.121:60006", "IP Address of server");
-DEFINE_string(load_balancer, "", "The algorithm for load balancing");
-DEFINE_int32(timeout_ms, 900000000, "RPC timeout in milliseconds");
-DEFINE_int32(max_retry, 5, "Max retries(not including the first RPC)"); 
-DEFINE_int32(interval_ms, 1000, "Milliseconds between consecutive requests");
+#include <mutex>
+#include <condition_variable>
 
-void HandleIDcreResponse(brpc::Controller* cntl,IDIncrement::IDResponse* response)
+std::mutex locker;
+std::condition_variable cv;
+int cnt_thread = 0;
+
+void execute_trsanction(int num)
 {
-    // std::unique_ptr makes sure cntl/response will be deleted before returning.
-    unique_ptr<brpc::Controller> cntl_guard(cntl);
-    unique_ptr<IDIncrement::IDResponse> response_guard(response);
-    
-    if (cntl->Failed()) {
-        cout << "Fail to send EchoRequest, " << cntl->ErrorText()<<endl;
-        return;
+    for(int i = 0;i < num; i++){
+        coor_node_id_apply_ptr->send_id_request();
+        // if(ret == -1)
+        // int cnt = 0;
+        usleep(250);
+        int ret = coor_node_id_apply_ptr->get_id();
+        while(ret == -1)
+        {
+            // if((cnt++)%3 == 0)
+            // coor_node_id_apply_ptr->send_id_request();
+            // coor_node_id_apply_ptr->wait_for_id();
+            // while(coor_node_id_apply_ptr->id_set_is_empty());
+            ret = coor_node_id_apply_ptr->get_id();
+        }
+        // std::cout << " get id = " <<  ret <<std::endl;
     }
-    // cout << "---------------------- part id = " << response->part_id() << endl;
-    cout<<"id = "<<response->part_id()<< " " << response->s_id() << " " <<response->m_id() << endl;
-
-    // cout << "own part version = " << response->own_part_message().part_version() << " , own part address : ";
-    // for(int i = 0; i < response->own_part_message().part_address().size(); i++)
-    //     cout << response->own_part_message().part_address(i) << " , ";
-    // cout << endl;
-
-    // cout << "either part version : " <<endl;
-    // for(auto it = response->either_part_message().begin(); it != response->either_part_message().end(); it++){
-    //     cout << "part id = " << it->first << " , part version = "<< it->second.part_version() << " , either part address = " ;
-    //     for(auto s : it->second.part_address())
-    //         cout << s << " , ";
-    //     cout << endl;
-    // }
-    
-    // for(int i = 0; i < response->partition_message().part_address().size(); i++)
-    //     cout << response->partition_message().part_address(i) << " , ";
-    // cout << endl;
-    // cout << "partition lsn message :";
-    // for(auto it = response->partition_alloc_lsn().begin(); it != response->partition_alloc_lsn().end(); it++){
-    //     cout << "id = " << it->first << ", lsns = ";
-    //     for(auto s : it->second.lsn())
-    //         cout << s << ", ";
-    // }
-    // cout << endl;
-    // brpc::AskToQuit();
+    std::unique_lock<std::mutex> lock(locker);
+    cnt_thread++;
+    if(cnt_thread == 16)
+    {
+        cv.notify_one();
+    }
+    lock.unlock();
 }
-
 
 int main(int argc, char* argv[]) {
 
-    // Parse gflags
-    // string server = argv[1];
-    google::ParseCommandLineFlags(&argc, &argv, true);
+    // std::stringstream out_path_tmp ;
+    // out_path_tmp << std::this_thread::get_id(); 
+    // std::string out_path = "client-" +  out_path_tmp.str() + ".log";
+    // std::cout << out_path<< std::endl;
+    // freopen("client.log","w",stdout);
 
-    //log
-    // logging::LoggingSettings log_setting;
-    // log_setting.logging_dest=logging::LOG_TO_FILE;
-    // string log_path="./id_client.log";
-    // log_setting.log_file=log_path.c_str();
-    // logging::InitLogging(log_setting);
+    coor_node_id_apply_ptr = new ClientForId;
+    coor_node_id_apply_ptr->init(argv[1]);
 
-    // freopen("id_client.log","w",stdout);
-    // A Channel represents a communication line to a Server. Notice that Channel is thread-safe and can be shared by all threads in your program.
-    brpc::Channel channel;
+    uint64_t before_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
 
-    // Initialize the channel, NULL means using default options.
-    brpc::ChannelOptions options;
-    options.protocol = FLAGS_protocol;
-    options.connection_type = FLAGS_connection_type;
-    options.timeout_ms = FLAGS_timeout_ms/*milliseconds*/;
-    options.max_retry = FLAGS_max_retry;
-    if (channel.Init(argv[1], FLAGS_load_balancer.c_str(), &options) != 0) {
-        cout << "Fail to initialize channel"<<endl;;
-        return -1;
+    for(int i = 0; i < 16; i++)
+    {
+        std::thread sender(execute_trsanction, atoi(argv[2]));//16个线程在一个计算节点执行事务
+        sender.detach();
     }
-
-    // Normally, you should not call a Channel directly, but instead construct a stub Service wrapping it. stub can be shared by all threads as well.
-    IDIncrement::IDService_Stub stub(&channel);
-
-    // Send a request 
-    // int log_id = 0;
-    // while (!brpc::IsAskedToQuit()) {
-    for(int i=0;i<1000;i++){
-        // We will receive response synchronously, safe to put variables on stack.
-        IDIncrement::IDRequest request;
-        // IDIncrement::IDResponse response;
-        IDIncrement::IDResponse* response=new IDIncrement::IDResponse();
-        brpc::Controller* cntl = new brpc::Controller();
-        // brpc::Controller cntl;
-
-        request.set_page_table_no("request id");
-        // request.set_brpc_address("10.11.6.121:22595");
-        // cntl->set_log_id(log_id ++);  // set by user
-
-        //callback
-        google::protobuf::Closure* done = brpc::NewCallback(&HandleIDcreResponse,cntl,response);
-        stub.IDInc(cntl, &request, response, done);
-
-        usleep(FLAGS_interval_ms * 1000L);
-    }
-    sleep(120);
-    cout<<"Client is going to quit"<<endl;
+    std::unique_lock<std::mutex> lock(locker);
+    cv.wait(lock);
+    lock.unlock();
+    // while(cnt < atoi(argv[2]))
+    // {
+    //     std::cout <<"cnt = " << cnt << std::endl;
+    // }
+    uint64_t end_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
+    // int n = cnt;
+    unsigned long long time_sum = end_get_id - before_get_id;
+    // sleep(12);
+    std::cout << "get id time = " << time_sum <<std::endl;
+    // std::cout <<"cnt final = " << n << std::endl;
     return 0;
 }

@@ -1,4 +1,4 @@
-/home/liuwenxin/git/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/rebuild_cache.dir
-/home/liuwenxin/git/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/server.dir
-/home/liuwenxin/git/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/edit_cache.dir
-/home/liuwenxin/git/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/client.dir
+/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/edit_cache.dir
+/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/client.dir
+/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/rebuild_cache.dir
+/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/server.dir

@@ -37,7 +37,7 @@ SET(BRPC_DYNAMIC_DEP_LIB
     $ENV{BRPC_PROTOBUF_LIB}/libprotoc.so
    # ${DEP_STATIC_LIB_DIR}/libprotobuf.a
     $ENV{BRPC_LEVELDB_LIB}/libleveldb.so
-    $ENV{BRPC_GFLAGS_LIB}/libgflags.so.2.2
+    $ENV{BRPC_GFLAGS_LIB}/libgflags.so
     libssl.so
     libcrypto.so
 )
@@ -52,7 +52,6 @@ SET(BRPC_DYNAMIC_LIB
 # )
 
 set(BRPC_LINK_LIB
-    pthread
     ${BRPC_DYNAMIC_LIB}
     ${BRPC_DYNAMIC_DEP_LIB}
 )
@@ -92,19 +91,28 @@ set(BRPC_LINK_LIB
 #         )
 
 find_package(Protobuf REQUIRED)
-find_package(Threads REQUIRED)
-protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS id.proto)
-protobuf_generate_cpp(PROTO_SRCS_tmp PROTO_HDRS_tmp coorMess.proto)
-list (APPEND PROTO_SRCS ${PROTO_SRCS_tmp})
-list (APPEND PROTO_HDRS ${PROTO_HDRS_tmp})
-# execute_process(COMMAND bash  "-c" " rm *.cc *.h && protoc ./id.proto --cpp_out=./"
-# 	WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
-# 	)
+# protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS id.proto)
+message("cmake path ${CMAKE_CURRENT_SOURCE_DIR}")
+execute_process(COMMAND bash "-c" "rm *pb.cc *pb.h"
+	WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+	)
+execute_process(COMMAND bash "-c" "protoc ./*.proto --cpp_out=./"
+	WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+)
 
+# find_file(PROTO_SRCS "*.cc" ${CMAKE_CURRENT_SOURCE_DIR} )
+file(GLOB PROTO_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/*.cc)
+file(GLOB PROTO_HDRS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+message(${PROTO_SRCS})
+message(${PROTO_HDRS})
+include_directories(${PROTOBUF_INCLUDE_DIR})
+
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread -fPIC")
+find_package (Threads)
 add_executable(client client.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 add_executable(server server.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 # add_executable(client client.cpp)
 # add_executable(server server.cpp)
 
-target_link_libraries(client  ${BRPC_LINK_LIB})
-target_link_libraries(server  ${BRPC_LINK_LIB})
+target_link_libraries(client  ${BRPC_LINK_LIB} ${CMAKE_THREAD_LIBS_INIT} ${PROTOBUF_LIBRARY})
+target_link_libraries(server  ${BRPC_LINK_LIB} ${CMAKE_THREAD_LIBS_INIT} ${PROTOBUF_LIBRARY})
