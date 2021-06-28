@@ -1,0 +1,2 @@
+export PRE_INCLUDE=/root/part-mtc/build-percona/percona-env/brpc_env/pre-install
+cmake .. -DCMAKE_INSTALL_PREFIX=../brpc-install -DCMAKE_INCLUDE_PATH="$PRE_INCLUDE/gflags/gflags-install/include;$PRE_INCLUDE/leveldb/leveldb-install/include;$PRE_INCLUDE/proto/protobuf-install/include" -DCMAKE_LIBRARY_PATH="$PRE_INCLUDE/gflags/gflags-install/lib;$PRE_INCLUDE/leveldb/leveldb-install/lib64;$PRE_INCLUDE/proto/protobuf-install/lib" -DCMAKE_PREFIX_PATH="$PRE_INCLUDE/gflags/gflags-install/lib;$PRE_INCLUDE/leveldb/leveldb-install/lib64;$PRE_INCLUDE/proto/protobuf-install/lib"
