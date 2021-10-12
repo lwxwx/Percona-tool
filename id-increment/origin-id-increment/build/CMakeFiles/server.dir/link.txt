@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-7/root/usr/bin/c++ -rdynamic CMakeFiles/server.dir/server.cpp.o CMakeFiles/server.dir/id.pb.cc.o -o server   -L/home/liuwenxin/Percona/brpc_env/output/lib  -Wl,-rpath,/home/liuwenxin/Percona/brpc_env/output/lib -lbrpc -lprotobuf -lprotoc -lleveldb /home/liuwenxin/Percona/brpc_env/gflags-install/lib//libgflags.so.2.2 -lssl -lcrypto 
