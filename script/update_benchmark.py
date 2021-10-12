@@ -8,13 +8,13 @@ import traceback
 import datetime
 import numpy
 import threading
+import os
 # from DBUtils.PooledDB import PooledDB
 
-config_path = "./config.ini"
-
-
+# config_path = "./config.ini"
+path = os.path.dirname(os.path.abspath(__file__))
 cfg = ConfigParser()
-cfg.read(config_path)
+cfg.read(path+"/config.ini")
 
 update_bench_load = int(cfg.get('update_benchmark', 'update_bench_load'))
 data_size=int(cfg.get('update_benchmark', 'data_size'))
@@ -22,11 +22,11 @@ time_s=float(cfg.get('update_benchmark', 'time_s'))
 thread_num=int(cfg.get('update_benchmark', 'thread_num'))
 
 port = int(cfg.get('build_env', 'port'))
-user = cfg.get('update_benchmark', 'usr')
-password = cfg.get('update_benchmark', 'pass')
+user = cfg.get('build_env', 'usr')
+password = cfg.get('build_env', 'pass')
 
-conflict_row_rate=cfg.get('update_benchmark', 'conflict_row_rate')
-conflict_page_rate=cfg.get('update_benchmark', 'conflict_page_rate')
+# conflict_row_rate=cfg.get('update_benchmark', 'conflict_row_rate')
+# conflict_page_rate=cfg.get('update_benchmark', 'conflict_page_rate')
 
 operation_id=int(cfg.get('update_benchmark', 'operation_id'))
 node_count=int(cfg.get('update_benchmark', 'node_count'))
@@ -105,24 +105,7 @@ if(update_bench_load == 1):
     cur.close()
     conn.close()
 else:
-    try:       
-        # POOL = PooledDB(
-        #     creator=pymysql,
-        #     maxconnections=0,
-        #     mincached=2,
-        #     maxcached=5,
-        #     # maxshared=3,
-        #     blocking=True,
-        #     maxusage=None,
-        #     setsession=[],
-        #     ping=0,
-        #     host='127.0.0.1',
-        #     port=port,
-        #     user=user,
-        #     password=password,
-        #     database='test',
-        #     charset='utf8'
-        # )
+    try:  
         print("start test",time_s,"sec...")
         threads =[]
         for i in range (0,thread_num):

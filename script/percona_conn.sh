@@ -3,9 +3,9 @@
  # @Date: 2021-03-19
 ###
 
-source $( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )/build.sh
+source /home/liuwenxin/Percona/script/build.sh
 
-cat $RUN_PATH/percona_22303/percona_error.log | grep password
+cat /home/liuwenxin/mysql_out_50/percona_22303/percona_error.log | grep password
 
 echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123';"
 
