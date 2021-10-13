@@ -3,7 +3,7 @@
  # @Date: 2021-03-19
 ###
 
-source /home/liuwenxin/Percona/script/build.sh
+source $( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )/build.sh
 
 cat /home/liuwenxin/mysql_out_50/percona_22303/percona_error.log | grep password
 
