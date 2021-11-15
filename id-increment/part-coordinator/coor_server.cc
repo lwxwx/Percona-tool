@@ -142,12 +142,12 @@ void HandleIDcreResponse(brpc::Controller* cntl,IDIncrement::IDResponse* respons
         std::cout << "Fail to send EchoRequest, " << cntl->ErrorText() << std::endl;
         return;
     }
-    // std::cout<<"id = "<<response->part_id()<< "-" << response->s_id() << "-" <<response->m_id() << std::endl;
+    std::cout<<"id = "<<response->part_id()<< "-" << response->s_id() << "-" <<response->m_id() << std::endl;
 
-    std::lock_guard<std::mutex> guard(id_set_lock);
+    // std::lock_guard<std::mutex> guard(id_set_lock);
     // std::unique_lock<std::mutex> locker(get_id_locker);
-    cnt++;
-    id_set.insert(cnt);
+    // cnt++;
+    // id_set.insert(cnt);
     // notify_id_waiter();
     // locker.unlock();
     // get_id_cv.notify_one();
@@ -163,6 +163,7 @@ int ClientForId::send_id_request()
     request.set_page_table_no("request id");
     google::protobuf::Closure* done = brpc::NewCallback(&HandleIDcreResponse,cntl,response);
     stub->IDInc(cntl, &request, response, done);
+    std::cout << "send over" << std::endl;
     return 1;
 }
 
@@ -193,6 +194,7 @@ void IDIncreImpl::IDInc(google::protobuf::RpcController* cntl_base, const IDIncr
     brpc::ClosureGuard done_guard(done);
     brpc::Controller* cntl = static_cast<brpc::Controller*>(cntl_base);
     std::lock_guard<std::mutex> guard(id_lock);
+    // std::cout<<"Received request from " << cntl->remote_side() << " to " << cntl->local_side()<< ": " << request->page_table_no()<< std::endl;
     if(part_id == 0)
     {
         m_id++;
@@ -210,7 +212,6 @@ void IDIncreImpl::IDInc(google::protobuf::RpcController* cntl_base, const IDIncr
     else//单分区事务
     {
         s_id++;
-        // std::cout<<"Received request from " << cntl->remote_side() << " to " << cntl->local_side()<< ": " << request->page_table_no()<<" ,allot id: "<< part_id << "-" << s_id << "-" << m_id << std::endl;
     }
     response->set_part_id(part_id);
     response->set_s_id(s_id);

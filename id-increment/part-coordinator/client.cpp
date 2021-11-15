@@ -5,6 +5,7 @@
  * @LastEditTime: 2020-07-12 16:30
  * @Description: file content
  * @FilePath: /multi-master-tool/id-increment/client.cpp
+ * @bash cmd : ./client 127.0.0.1:60006 100 #addr:port send_num
  */
 
 #include <gflags/gflags.h>
@@ -33,24 +34,25 @@ void execute_trsanction(int num)
         // if(ret == -1)
         // int cnt = 0;
         usleep(250);
-        int ret = coor_node_id_apply_ptr->get_id();
-        while(ret == -1)
-        {
-            // if((cnt++)%3 == 0)
-            // coor_node_id_apply_ptr->send_id_request();
-            // coor_node_id_apply_ptr->wait_for_id();
-            // while(coor_node_id_apply_ptr->id_set_is_empty());
-            ret = coor_node_id_apply_ptr->get_id();
-        }
+        // int ret = coor_node_id_apply_ptr->get_id();
+        // coor_node_id_apply_ptr->send_id_request();
+        // while(ret == -1)
+        // {
+        //     // if((cnt++)%3 == 0)
+        //     // coor_node_id_apply_ptr->send_id_request();
+        //     // coor_node_id_apply_ptr->wait_for_id();
+        //     // while(coor_node_id_apply_ptr->id_set_is_empty());
+        //     ret = coor_node_id_apply_ptr->get_id();
+        // }
         // std::cout << " get id = " <<  ret <<std::endl;
     }
-    std::unique_lock<std::mutex> lock(locker);
-    cnt_thread++;
-    if(cnt_thread == 16)
-    {
-        cv.notify_one();
-    }
-    lock.unlock();
+    // std::unique_lock<std::mutex> lock(locker);
+    // cnt_thread++;
+    // if(cnt_thread == 16)
+    // {
+    //     cv.notify_one();
+    // }
+    // lock.unlock();
 }
 
 int main(int argc, char* argv[]) {
@@ -66,22 +68,18 @@ int main(int argc, char* argv[]) {
 
     uint64_t before_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
 
-    for(int i = 0; i < 16; i++)
+    for(int i = 0; i < 1; i++)
     {
         std::thread sender(execute_trsanction, atoi(argv[2]));//16个线程在一个计算节点执行事务
         sender.detach();
     }
-    std::unique_lock<std::mutex> lock(locker);
-    cv.wait(lock);
-    lock.unlock();
-    // while(cnt < atoi(argv[2]))
-    // {
-    //     std::cout <<"cnt = " << cnt << std::endl;
-    // }
+    // std::unique_lock<std::mutex> lock(locker);
+    // cv.wait(lock);
+    // lock.unlock();
     uint64_t end_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
     // int n = cnt;
     unsigned long long time_sum = end_get_id - before_get_id;
-    // sleep(12);
+    sleep(12);
     std::cout << "get id time = " << time_sum <<std::endl;
     // std::cout <<"cnt final = " << n << std::endl;
     return 0;

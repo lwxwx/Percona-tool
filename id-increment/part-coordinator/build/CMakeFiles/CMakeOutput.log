@@ -1,4 +1,4 @@
-The system is: Linux - 4.18.0-240.1.1.el8_3.x86_64 - x86_64
+The system is: Linux - 4.19.0-9.ucloud - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/3.11.4/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,157 +23,156 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/3.11.4/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_6bc27/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_6bc27.dir/build.make CMakeFiles/cmTC_6bc27.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6bc27.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_6bc27.dir/testCCompiler.c.o   -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_6bc27
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bc27.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6bc27.dir/testCCompiler.c.o  -o cmTC_6bc27 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_13df1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_13df1.dir/build.make CMakeFiles/cmTC_13df1.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13df1.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_13df1.dir/testCCompiler.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_13df1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13df1.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_13df1.dir/testCCompiler.c.o  -o cmTC_13df1 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_155aa/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_155aa.dir/build.make CMakeFiles/cmTC_155aa.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_155aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_155aa.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o  -o cmTC_155aa 
+Run Build Command:"/usr/bin/make" "cmTC_71d11/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71d11.dir/build.make CMakeFiles/cmTC_71d11.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_71d11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71d11.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o  -o cmTC_71d11 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
-COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
 OFFLOAD_TARGET_NAMES=nvptx-none
 OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-redhat-linux
-Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
-COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
-LIBRARY_PATH=/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_155aa' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgRtny3.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_155aa /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_155aa' '-mtune=generic' '-march=x86-64'
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_71d11' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cco8mlE0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_71d11 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_71d11' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_155aa/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_155aa.dir/build.make CMakeFiles/cmTC_155aa.dir/build]
-  ignore line: [gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_155aa]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_155aa.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o  -o cmTC_155aa ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_71d11/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_71d11.dir/build.make CMakeFiles/cmTC_71d11.dir/build]
+  ignore line: [make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_71d11]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71d11.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o  -o cmTC_71d11 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
   ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-redhat-linux]
-  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) ]
-  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
-  ignore line: [LIBRARY_PATH=/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_155aa' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgRtny3.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_155aa /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
-    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/collect2] ==> ignore
+  ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_71d11' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cco8mlE0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_71d11 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccgRtny3.res] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cco8mlE0.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [--build-id] ==> ignore
-    arg [--no-add-needed] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
     arg [-m] ==> ignore
     arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_155aa] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> ignore
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64]
-    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
-    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
+    arg [cmTC_71d11] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
+    arg [-L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib] ==> dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib] ==> dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
     arg [-L.] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..]
-    arg [CMakeFiles/cmTC_155aa.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
+    arg [CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--no-as-needed] ==> ignore
+    arg [--pop-state] ==> ignore
     arg [-lc] ==> lib [c]
     arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--no-as-needed] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> ignore
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8] ==> [/usr/lib/gcc/x86_64-redhat-linux/8]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> [/usr/lib64]
-  collapse library dir [/lib/../lib64] ==> [/lib64]
-  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> [/usr/lib]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib] ==> [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7] ==> [/usr/lib/gcc/x86_64-linux-gnu/7]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib] ==> [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> [/usr/lib]
   implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-  implicit dirs: [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64;/usr/lib/gcc/x86_64-redhat-linux/8;/usr/lib64;/lib64;/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib;/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib;/usr/lib]
+  implicit dirs: [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib;/usr/lib/gcc/x86_64-linux-gnu/7;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
 
 
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_61f48/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_61f48.dir/build.make CMakeFiles/cmTC_61f48.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_61f48.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_61f48.dir/feature_tests.c.o   -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_61f48
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61f48.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_61f48.dir/feature_tests.c.o  -o cmTC_61f48 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ce45b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ce45b.dir/build.make CMakeFiles/cmTC_ce45b.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce45b.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_ce45b.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ce45b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce45b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ce45b.dir/feature_tests.c.o  -o cmTC_ce45b 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -183,17 +182,17 @@ gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletes
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_f10f7/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_f10f7.dir/build.make CMakeFiles/cmTC_f10f7.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f10f7.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_f10f7.dir/feature_tests.c.o   -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f10f7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f10f7.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f10f7.dir/feature_tests.c.o  -o cmTC_f10f7 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_f2990/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f2990.dir/build.make CMakeFiles/cmTC_f2990.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2990.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_f2990.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f2990
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2990.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f2990.dir/feature_tests.c.o  -o cmTC_f2990 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -203,17 +202,17 @@ gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletes
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_f90d8/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_f90d8.dir/build.make CMakeFiles/cmTC_f90d8.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f90d8.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_f90d8.dir/feature_tests.c.o   -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f90d8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f90d8.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f90d8.dir/feature_tests.c.o  -o cmTC_f90d8 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_37039/fast"
+/usr/bin/make -f CMakeFiles/cmTC_37039.dir/build.make CMakeFiles/cmTC_37039.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37039.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_37039.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_37039
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37039.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_37039.dir/feature_tests.c.o  -o cmTC_37039 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -221,111 +220,111 @@ gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletes
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_bad83/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_bad83.dir/build.make CMakeFiles/cmTC_bad83.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bad83.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_bad83.dir/testCXXCompiler.cxx.o -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_bad83
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bad83.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_bad83.dir/testCXXCompiler.cxx.o  -o cmTC_bad83 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_02171/fast"
+/usr/bin/make -f CMakeFiles/cmTC_02171.dir/build.make CMakeFiles/cmTC_02171.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_02171.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_02171.dir/testCXXCompiler.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_02171
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02171.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_02171.dir/testCXXCompiler.cxx.o  -o cmTC_02171 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_c4363/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_c4363.dir/build.make CMakeFiles/cmTC_c4363.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_c4363
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4363.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c4363 
+Run Build Command:"/usr/bin/make" "cmTC_f375e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f375e.dir/build.make CMakeFiles/cmTC_f375e.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_f375e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f375e.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f375e 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
-COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
 OFFLOAD_TARGET_NAMES=nvptx-none
 OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-redhat-linux
-Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
-COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
-LIBRARY_PATH=/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c4363' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cctRDqYp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c4363 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c4363' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f375e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccS2BMNl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f375e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f375e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_c4363/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_c4363.dir/build.make CMakeFiles/cmTC_c4363.dir/build]
-  ignore line: [gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_c4363]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4363.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c4363 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f375e/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f375e.dir/build.make CMakeFiles/cmTC_f375e.dir/build]
+  ignore line: [make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_f375e]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f375e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f375e ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
   ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-redhat-linux]
-  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) ]
-  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
-  ignore line: [LIBRARY_PATH=/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/:/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c4363' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cctRDqYp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c4363 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64 -L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
-    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/collect2] ==> ignore
+  ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f375e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccS2BMNl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f375e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cctRDqYp.res] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccS2BMNl.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [--build-id] ==> ignore
-    arg [--no-add-needed] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
     arg [-m] ==> ignore
     arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c4363] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> ignore
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64]
-    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
-    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-    arg [-L/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
+    arg [cmTC_f375e] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
+    arg [-L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib] ==> dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib] ==> dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
     arg [-L.] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..]
-    arg [CMakeFiles/cmTC_c4363.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
+    arg [CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -333,40 +332,37 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o] ==> ignore
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64/../lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8] ==> [/usr/lib/gcc/x86_64-redhat-linux/8]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64] ==> [/usr/lib64]
-  collapse library dir [/lib/../lib64] ==> [/lib64]
-  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64]
-  collapse library dir [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib] ==> [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> [/usr/lib]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib] ==> [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7] ==> [/usr/lib/gcc/x86_64-linux-gnu/7]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib] ==> [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> [/usr/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit dirs: [/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/lib64;/usr/lib/gcc/x86_64-redhat-linux/8;/usr/lib64;/lib64;/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/lib;/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/lib;/usr/lib]
+  implicit dirs: [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib;/usr/lib/gcc/x86_64-linux-gnu/7;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
 
 
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_4e075/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_4e075.dir/build.make CMakeFiles/cmTC_4e075.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4e075.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_4e075.dir/feature_tests.cxx.o -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_4e075
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e075.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_4e075.dir/feature_tests.cxx.o  -o cmTC_4e075 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_be75c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_be75c.dir/build.make CMakeFiles/cmTC_be75c.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_be75c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_be75c.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_be75c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be75c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_be75c.dir/feature_tests.cxx.o  -o cmTC_be75c 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -429,17 +425,17 @@ gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletes
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_84f2c/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_84f2c.dir/build.make CMakeFiles/cmTC_84f2c.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_84f2c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_84f2c.dir/feature_tests.cxx.o -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_84f2c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84f2c.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_84f2c.dir/feature_tests.cxx.o  -o cmTC_84f2c 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a48df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a48df.dir/build.make CMakeFiles/cmTC_a48df.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a48df.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_a48df.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a48df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a48df.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a48df.dir/feature_tests.cxx.o  -o cmTC_a48df 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -502,17 +498,17 @@ gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletes
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_cee74/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_cee74.dir/build.make CMakeFiles/cmTC_cee74.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cee74.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_cee74.dir/feature_tests.cxx.o -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_cee74
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cee74.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_cee74.dir/feature_tests.cxx.o  -o cmTC_cee74 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_463c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_463c4.dir/build.make CMakeFiles/cmTC_463c4.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_463c4.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_463c4.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_463c4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_463c4.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_463c4.dir/feature_tests.cxx.o  -o cmTC_463c4 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -575,17 +571,17 @@ gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletes
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_66599/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_66599.dir/build.make CMakeFiles/cmTC_66599.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_66599.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_66599.dir/feature_tests.cxx.o -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_66599
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66599.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_66599.dir/feature_tests.cxx.o  -o cmTC_66599 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_dae4c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dae4c.dir/build.make CMakeFiles/cmTC_dae4c.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dae4c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_dae4c.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_dae4c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dae4c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_dae4c.dir/feature_tests.cxx.o  -o cmTC_dae4c 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -646,30 +642,30 @@ gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletes
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_a445d/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_a445d.dir/build.make CMakeFiles/cmTC_a445d.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a445d.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a445d.dir/CheckIncludeFile.c.o   -c /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_a445d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a445d.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a445d.dir/CheckIncludeFile.c.o  -o cmTC_a445d 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2cf0d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2cf0d.dir/build.make CMakeFiles/cmTC_2cf0d.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2cf0d.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2cf0d.dir/CheckIncludeFile.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2cf0d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cf0d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2cf0d.dir/CheckIncludeFile.c.o  -o cmTC_2cf0d 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_96b3f/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_96b3f.dir/build.make CMakeFiles/cmTC_96b3f.dir/build
-gmake[1]: Entering directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_96b3f.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_96b3f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_96b3f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96b3f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_96b3f.dir/CheckFunctionExists.c.o  -o cmTC_96b3f -lpthread 
-gmake[1]: Leaving directory '/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ef1b7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ef1b7.dir/build.make CMakeFiles/cmTC_ef1b7.dir/build
+make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ef1b7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ef1b7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ef1b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef1b7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ef1b7.dir/CheckFunctionExists.c.o  -o cmTC_ef1b7 -lpthread 
+make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 

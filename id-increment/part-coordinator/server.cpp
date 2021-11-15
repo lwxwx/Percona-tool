@@ -5,6 +5,7 @@
  * @LastEditTime: 2021-05-26 14:00
  * @Description: file content
  * @FilePath: /multi-master-tool/id-increment/part-coordinator/part_server.cpp
+ * @bash cmd : ./server 1 60006 #part_id port
  */
 
 #include <brpc/server.h>
@@ -43,8 +44,8 @@ int main(int argc, char* argv[]) {
     int part_id = atoi(argv[1]);
     int port = atoi(argv[2]);
 
-    std::string out_path = "server-" + std::to_string(part_id) + ".log";
-    std::cout << out_path<< std::endl;
+    // std::string out_path = "server-" + std::to_string(part_id) + ".log";
+    // std::cout << out_path<< std::endl;
     // freopen(out_path.c_str(),"w",stdout);
 
     coor_node_id_allocator_ptr = new ServerForId;
@@ -76,7 +77,7 @@ int main(int argc, char* argv[]) {
         coor_message.detach();
     }
 
-    std::cout << "over" << std::endl;
+    // std::cout << "over" << std::endl;
     sleep(1200);
 
     return 0;

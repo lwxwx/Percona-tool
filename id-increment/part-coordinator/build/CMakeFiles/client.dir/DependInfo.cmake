@@ -4,19 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/part-mtc/build-percona/percona-tool/simpletest/client.cpp" "/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/client.dir/client.cpp.o"
-  "/root/part-mtc/build-percona/percona-tool/simpletest/coorMess.pb.cc" "/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/client.dir/coorMess.pb.cc.o"
-  "/root/part-mtc/build-percona/percona-tool/simpletest/coor_server.cc" "/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/client.dir/coor_server.cc.o"
-  "/root/part-mtc/build-percona/percona-tool/simpletest/id.pb.cc" "/root/part-mtc/build-percona/percona-tool/simpletest/build/CMakeFiles/client.dir/id.pb.cc.o"
+  "/home/ubuntu/Percona-tool/id-increment/part-coordinator/client.cpp" "/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/client.dir/client.cpp.o"
+  "/home/ubuntu/Percona-tool/id-increment/part-coordinator/coorMess.pb.cc" "/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/client.dir/coorMess.pb.cc.o"
+  "/home/ubuntu/Percona-tool/id-increment/part-coordinator/coor_server.cc" "/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/client.dir/coor_server.cc.o"
+  "/home/ubuntu/Percona-tool/id-increment/part-coordinator/id.pb.cc" "/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/client.dir/id.pb.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/leveldb/leveldb-install/include"
-  "/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/protobuf/protobuf-install/include"
-  "/root/part-mtc/build-percona/percona-env/brpc_env/pre-install/gflags/gflags-install/include"
-  "/root/part-mtc/build-percona/percona-env/brpc_env/brpc-install/include"
+  "/home/ubuntu/dev_env/brpc_env/protobuf-install/include"
+  "/home/ubuntu/dev_env/brpc_env/brpc-install/include"
   )
 
 # Targets to which this target links.

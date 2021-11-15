@@ -36,8 +36,8 @@ SET(BRPC_DYNAMIC_DEP_LIB
     $ENV{BRPC_PROTOBUF_LIB}/libprotobuf.so
     $ENV{BRPC_PROTOBUF_LIB}/libprotoc.so
    # ${DEP_STATIC_LIB_DIR}/libprotobuf.a
-    $ENV{BRPC_LEVELDB_LIB}/libleveldb.so
-    $ENV{BRPC_GFLAGS_LIB}/libgflags.so
+    # $ENV{BRPC_LEVELDB_LIB}/libleveldb.so
+    # $ENV{BRPC_GFLAGS_LIB}/libgflags.so
     libssl.so
     libcrypto.so
 )

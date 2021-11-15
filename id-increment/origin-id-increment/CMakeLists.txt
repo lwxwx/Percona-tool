@@ -14,10 +14,10 @@ project("id-increment")
 # list(APPEND CMAKE_LIBRARY_PATH $ENV{BRPC_SSL_LIB})
 # list(APPEND CMAKE_LIBRARY_PATH $ENV{BRPC_LIB})
 
-include_directories($ENV{BRPC_LEVELDB_INCLUDE})
+# include_directories($ENV{BRPC_LEVELDB_INCLUDE})
 include_directories($ENV{BRPC_PROTOBUF_INCLUDE})
-include_directories($ENV{BRPC_GFLAGS_INCLUDE})
-include_directories($ENV{BRPC_SSL_INCLUDE})
+# include_directories($ENV{BRPC_GFLAGS_INCLUDE})
+# include_directories($ENV{BRPC_SSL_INCLUDE})
 include_directories($ENV{BRPC_INCLUDE})
 
 # SET(BRPC_STATIC_DEP_LIB
@@ -36,8 +36,8 @@ SET(BRPC_DYNAMIC_DEP_LIB
     $ENV{BRPC_PROTOBUF_LIB}/libprotobuf.so
     $ENV{BRPC_PROTOBUF_LIB}/libprotoc.so
    # ${DEP_STATIC_LIB_DIR}/libprotobuf.a
-    $ENV{BRPC_LEVELDB_LIB}/libleveldb.so
-    $ENV{BRPC_GFLAGS_LIB}/libgflags.so.2.2
+    # $ENV{BRPC_LEVELDB_LIB}/libleveldb.so
+    libgflags.so
     libssl.so
     libcrypto.so
 )
@@ -90,7 +90,7 @@ set(BRPC_LINK_LIB
 #           VERBATIM
 #         )
 
-# find_package(Protobuf REQUIRED)
+find_package(Protobuf REQUIRED)
 # protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS id.proto)
 message("cmake path ${CMAKE_CURRENT_SOURCE_DIR}")
 execute_process(COMMAND bash "-c" "rm *pb.cc *pb.h"
@@ -105,11 +105,14 @@ file(GLOB PROTO_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/*.cc)
 file(GLOB PROTO_HDRS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
 message(${PROTO_SRCS})
 message(${PROTO_HDRS})
+include_directories(${PROTOBUF_INCLUDE_DIR})
 
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread -fPIC")
+find_package (Threads)
 add_executable(client client.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 add_executable(server server.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 # add_executable(client client.cpp)
 # add_executable(server server.cpp)
 
-target_link_libraries(client  ${BRPC_LINK_LIB})
-target_link_libraries(server  ${BRPC_LINK_LIB})
+target_link_libraries(client  ${BRPC_LINK_LIB} ${CMAKE_THREAD_LIBS_INIT} ${PROTOBUF_LIBRARY})
+target_link_libraries(server  ${BRPC_LINK_LIB} ${CMAKE_THREAD_LIBS_INIT} ${PROTOBUF_LIBRARY})
