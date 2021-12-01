@@ -69,28 +69,23 @@ void InitDefaults() {
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorRequest, _has_bits_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorRequest, m_id_),
-  0,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorResponse, _has_bits_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorResponse, part_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorResponse, s_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CoorMessage::CoorResponse, m_id_),
-  2,
-  0,
-  1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 6, sizeof(::CoorMessage::CoorRequest)},
-  { 7, 15, sizeof(::CoorMessage::CoorResponse)},
+  { 0, -1, sizeof(::CoorMessage::CoorRequest)},
+  { 6, -1, sizeof(::CoorMessage::CoorResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -120,14 +115,13 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\016coorMess.proto\022\013CoorMessage\"\033\n\013CoorReq"
-      "uest\022\014\n\004m_id\030\001 \002(\003\";\n\014CoorResponse\022\017\n\007pa"
-      "rt_id\030\001 \002(\005\022\014\n\004s_id\030\002 \002(\003\022\014\n\004m_id\030\003 \002(\0032"
-      "N\n\013CoorService\022\?\n\010CoorMess\022\030.CoorMessage"
-      ".CoorRequest\032\031.CoorMessage.CoorResponseB"
-      "\003\200\001\001"
+      "uest\022\014\n\004m_id\030\001 \001(\003\"-\n\014CoorResponse\022\017\n\007pa"
+      "rt_id\030\001 \001(\005\022\014\n\004s_id\030\002 \001(\0032N\n\013CoorService"
+      "\022\?\n\010CoorMess\022\030.CoorMessage.CoorRequest\032\031"
+      ".CoorMessage.CoorResponseB\003\200\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 204);
+      descriptor, 198);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "coorMess.proto", &protobuf_RegisterTypes);
 }
@@ -162,8 +156,7 @@ CoorRequest::CoorRequest()
 }
 CoorRequest::CoorRequest(const CoorRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   m_id_ = from.m_id_;
   // @@protoc_insertion_point(copy_constructor:CoorMessage.CoorRequest)
@@ -202,7 +195,6 @@ void CoorRequest::Clear() {
   (void) cached_has_bits;
 
   m_id_ = GOOGLE_LONGLONG(0);
-  _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -216,11 +208,11 @@ bool CoorRequest::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int64 m_id = 1;
+      // int64 m_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          set_has_m_id();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &m_id_)));
@@ -256,15 +248,14 @@ void CoorRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int64 m_id = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // int64 m_id = 1;
+  if (this->m_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->m_id(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:CoorMessage.CoorRequest)
 }
@@ -276,15 +267,14 @@ void CoorRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int64 m_id = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // int64 m_id = 1;
+  if (this->m_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->m_id(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:CoorMessage.CoorRequest)
   return target;
@@ -294,17 +284,18 @@ size_t CoorRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:CoorMessage.CoorRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // required int64 m_id = 1;
-  if (has_m_id()) {
+  // int64 m_id = 1;
+  if (this->m_id() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->m_id());
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -332,7 +323,7 @@ void CoorRequest::MergeFrom(const CoorRequest& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_m_id()) {
+  if (from.m_id() != 0) {
     set_m_id(from.m_id());
   }
 }
@@ -352,7 +343,6 @@ void CoorRequest::CopyFrom(const CoorRequest& from) {
 }
 
 bool CoorRequest::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   return true;
 }
 
@@ -363,7 +353,6 @@ void CoorRequest::Swap(CoorRequest* other) {
 void CoorRequest::InternalSwap(CoorRequest* other) {
   using std::swap;
   swap(m_id_, other->m_id_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -380,7 +369,6 @@ void CoorResponse::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CoorResponse::kPartIdFieldNumber;
 const int CoorResponse::kSIdFieldNumber;
-const int CoorResponse::kMIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CoorResponse::CoorResponse()
@@ -392,8 +380,7 @@ CoorResponse::CoorResponse()
 }
 CoorResponse::CoorResponse(const CoorResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&s_id_, &from.s_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&part_id_) -
@@ -435,13 +422,9 @@ void CoorResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
-    ::memset(&s_id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&part_id_) -
-        reinterpret_cast<char*>(&s_id_)) + sizeof(part_id_));
-  }
-  _has_bits_.Clear();
+  ::memset(&s_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&part_id_) -
+      reinterpret_cast<char*>(&s_id_)) + sizeof(part_id_));
   _internal_metadata_.Clear();
 }
 
@@ -455,11 +438,11 @@ bool CoorResponse::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 part_id = 1;
+      // int32 part_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          set_has_part_id();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &part_id_)));
@@ -469,28 +452,14 @@ bool CoorResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // required int64 s_id = 2;
+      // int64 s_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_s_id();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &s_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // required int64 m_id = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_m_id();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &m_id_)));
         } else {
           goto handle_unusual;
         }
@@ -523,25 +492,19 @@ void CoorResponse::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 part_id = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // int32 part_id = 1;
+  if (this->part_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->part_id(), output);
   }
 
-  // required int64 s_id = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // int64 s_id = 2;
+  if (this->s_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->s_id(), output);
   }
 
-  // required int64 m_id = 3;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->m_id(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:CoorMessage.CoorResponse)
 }
@@ -553,85 +516,47 @@ void CoorResponse::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 part_id = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // int32 part_id = 1;
+  if (this->part_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->part_id(), target);
   }
 
-  // required int64 s_id = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // int64 s_id = 2;
+  if (this->s_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->s_id(), target);
   }
 
-  // required int64 m_id = 3;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->m_id(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:CoorMessage.CoorResponse)
   return target;
 }
 
-size_t CoorResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:CoorMessage.CoorResponse)
-  size_t total_size = 0;
-
-  if (has_s_id()) {
-    // required int64 s_id = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->s_id());
-  }
-
-  if (has_m_id()) {
-    // required int64 m_id = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->m_id());
-  }
-
-  if (has_part_id()) {
-    // required int32 part_id = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->part_id());
-  }
-
-  return total_size;
-}
 size_t CoorResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:CoorMessage.CoorResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  if (((_has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required int64 s_id = 2;
+  // int64 s_id = 2;
+  if (this->s_id() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->s_id());
+  }
 
-    // required int64 m_id = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->m_id());
-
-    // required int32 part_id = 1;
+  // int32 part_id = 1;
+  if (this->part_id() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->part_id());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -659,18 +584,11 @@ void CoorResponse::MergeFrom(const CoorResponse& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      s_id_ = from.s_id_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      m_id_ = from.m_id_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      part_id_ = from.part_id_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.s_id() != 0) {
+    set_s_id(from.s_id());
+  }
+  if (from.part_id() != 0) {
+    set_part_id(from.part_id());
   }
 }
 
@@ -689,7 +607,6 @@ void CoorResponse::CopyFrom(const CoorResponse& from) {
 }
 
 bool CoorResponse::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
   return true;
 }
 
@@ -700,9 +617,7 @@ void CoorResponse::Swap(CoorResponse* other) {
 void CoorResponse::InternalSwap(CoorResponse* other) {
   using std::swap;
   swap(s_id_, other->s_id_);
-  swap(m_id_, other->m_id_);
   swap(part_id_, other->part_id_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 

@@ -44,23 +44,18 @@ int main(int argc, char* argv[]) {
     int part_id = atoi(argv[1]);
     int port = atoi(argv[2]);
 
-    // std::string out_path = "server-" + std::to_string(part_id) + ".log";
-    // std::cout << out_path<< std::endl;
-    // freopen(out_path.c_str(),"w",stdout);
-
     coor_node_id_allocator_ptr = new ServerForId;
     coor_node_id_allocator_ptr->set_partid(part_id);
     coor_node_id_allocator_ptr->set_port(port);
-    std::cout << "set port" << std::endl;
     coor_node_id_allocator_ptr->init();
     std::thread allocator(id_allocator_run);
     allocator.detach();    
 
-    std::string pn_addr[] = {"10.11.6.121:60086", "10.11.6.117:60086"};//,"10.11.6.119:60086"};
+    std::string pn_addr[] = {"10.24.1.166:60087"};
     if(part_id == 0)
     {
         std::cout << "part 0" << std::endl;
-        for(int i = 0; i < 2; i++)
+        for(int i = 0; i < 1; i++)
         {
             ClientForCoor* coor_node_id_heartbeat_send_message_ptr_tmp = new ClientForCoor;
             coor_node_id_heartbeat_send_message_ptr_tmp->init(pn_addr[i]);
@@ -71,13 +66,12 @@ int main(int argc, char* argv[]) {
     {
         std::cout << "part "<< part_id << std::endl;
         coor_node_id_heartbeat_receive_message_ptr = new ServerForCoor;
-        coor_node_id_heartbeat_receive_message_ptr->set_port(60086);
+        coor_node_id_heartbeat_receive_message_ptr->set_port(60086+part_id);
         coor_node_id_heartbeat_receive_message_ptr->init();
         std::thread coor_message(coor_run);
         coor_message.detach();
     }
 
-    // std::cout << "over" << std::endl;
     sleep(1200);
 
     return 0;

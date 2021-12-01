@@ -90,13 +90,6 @@ class CoorRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
     return *this;
   }
   #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
   static const ::google::protobuf::Descriptor* descriptor();
   static const CoorRequest& default_instance();
 
@@ -158,8 +151,7 @@ class CoorRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // required int64 m_id = 1;
-  bool has_m_id() const;
+  // int64 m_id = 1;
   void clear_m_id();
   static const int kMIdFieldNumber = 1;
   ::google::protobuf::int64 m_id() const;
@@ -167,13 +159,10 @@ class CoorRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // @@protoc_insertion_point(class_scope:CoorMessage.CoorRequest)
  private:
-  void set_has_m_id();
-  void clear_has_m_id();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::int64 m_id_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_coorMess_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -204,13 +193,6 @@ class CoorResponse : public ::google::protobuf::Message /* @@protoc_insertion_po
     return *this;
   }
   #endif
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
   static const ::google::protobuf::Descriptor* descriptor();
   static const CoorResponse& default_instance();
 
@@ -272,22 +254,13 @@ class CoorResponse : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // required int64 s_id = 2;
-  bool has_s_id() const;
+  // int64 s_id = 2;
   void clear_s_id();
   static const int kSIdFieldNumber = 2;
   ::google::protobuf::int64 s_id() const;
   void set_s_id(::google::protobuf::int64 value);
 
-  // required int64 m_id = 3;
-  bool has_m_id() const;
-  void clear_m_id();
-  static const int kMIdFieldNumber = 3;
-  ::google::protobuf::int64 m_id() const;
-  void set_m_id(::google::protobuf::int64 value);
-
-  // required int32 part_id = 1;
-  bool has_part_id() const;
+  // int32 part_id = 1;
   void clear_part_id();
   static const int kPartIdFieldNumber = 1;
   ::google::protobuf::int32 part_id() const;
@@ -295,22 +268,11 @@ class CoorResponse : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // @@protoc_insertion_point(class_scope:CoorMessage.CoorResponse)
  private:
-  void set_has_part_id();
-  void clear_has_part_id();
-  void set_has_s_id();
-  void clear_has_s_id();
-  void set_has_m_id();
-  void clear_has_m_id();
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::HasBits<1> _has_bits_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::int64 s_id_;
-  ::google::protobuf::int64 m_id_;
   ::google::protobuf::int32 part_id_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_coorMess_2eproto::TableStruct;
 };
 // ===================================================================
@@ -383,26 +345,16 @@ class CoorService_Stub : public CoorService {
 #endif  // __GNUC__
 // CoorRequest
 
-// required int64 m_id = 1;
-inline bool CoorRequest::has_m_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void CoorRequest::set_has_m_id() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void CoorRequest::clear_has_m_id() {
-  _has_bits_[0] &= ~0x00000001u;
-}
+// int64 m_id = 1;
 inline void CoorRequest::clear_m_id() {
   m_id_ = GOOGLE_LONGLONG(0);
-  clear_has_m_id();
 }
 inline ::google::protobuf::int64 CoorRequest::m_id() const {
   // @@protoc_insertion_point(field_get:CoorMessage.CoorRequest.m_id)
   return m_id_;
 }
 inline void CoorRequest::set_m_id(::google::protobuf::int64 value) {
-  set_has_m_id();
+  
   m_id_ = value;
   // @@protoc_insertion_point(field_set:CoorMessage.CoorRequest.m_id)
 }
@@ -411,76 +363,32 @@ inline void CoorRequest::set_m_id(::google::protobuf::int64 value) {
 
 // CoorResponse
 
-// required int32 part_id = 1;
-inline bool CoorResponse::has_part_id() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void CoorResponse::set_has_part_id() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void CoorResponse::clear_has_part_id() {
-  _has_bits_[0] &= ~0x00000004u;
-}
+// int32 part_id = 1;
 inline void CoorResponse::clear_part_id() {
   part_id_ = 0;
-  clear_has_part_id();
 }
 inline ::google::protobuf::int32 CoorResponse::part_id() const {
   // @@protoc_insertion_point(field_get:CoorMessage.CoorResponse.part_id)
   return part_id_;
 }
 inline void CoorResponse::set_part_id(::google::protobuf::int32 value) {
-  set_has_part_id();
+  
   part_id_ = value;
   // @@protoc_insertion_point(field_set:CoorMessage.CoorResponse.part_id)
 }
 
-// required int64 s_id = 2;
-inline bool CoorResponse::has_s_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void CoorResponse::set_has_s_id() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void CoorResponse::clear_has_s_id() {
-  _has_bits_[0] &= ~0x00000001u;
-}
+// int64 s_id = 2;
 inline void CoorResponse::clear_s_id() {
   s_id_ = GOOGLE_LONGLONG(0);
-  clear_has_s_id();
 }
 inline ::google::protobuf::int64 CoorResponse::s_id() const {
   // @@protoc_insertion_point(field_get:CoorMessage.CoorResponse.s_id)
   return s_id_;
 }
 inline void CoorResponse::set_s_id(::google::protobuf::int64 value) {
-  set_has_s_id();
+  
   s_id_ = value;
   // @@protoc_insertion_point(field_set:CoorMessage.CoorResponse.s_id)
-}
-
-// required int64 m_id = 3;
-inline bool CoorResponse::has_m_id() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void CoorResponse::set_has_m_id() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void CoorResponse::clear_has_m_id() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void CoorResponse::clear_m_id() {
-  m_id_ = GOOGLE_LONGLONG(0);
-  clear_has_m_id();
-}
-inline ::google::protobuf::int64 CoorResponse::m_id() const {
-  // @@protoc_insertion_point(field_get:CoorMessage.CoorResponse.m_id)
-  return m_id_;
-}
-inline void CoorResponse::set_m_id(::google::protobuf::int64 value) {
-  set_has_m_id();
-  m_id_ = value;
-  // @@protoc_insertion_point(field_set:CoorMessage.CoorResponse.m_id)
 }
 
 #ifdef __GNUC__

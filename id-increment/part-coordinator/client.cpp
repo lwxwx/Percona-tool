@@ -29,58 +29,30 @@ int cnt_thread = 0;
 
 void execute_trsanction(int num)
 {
+    srand((unsigned)time(NULL));
     for(int i = 0;i < num; i++){
+
+        uint64_t before_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
         coor_node_id_apply_ptr->send_id_request();
-        // if(ret == -1)
-        // int cnt = 0;
-        usleep(250);
-        // int ret = coor_node_id_apply_ptr->get_id();
-        // coor_node_id_apply_ptr->send_id_request();
-        // while(ret == -1)
-        // {
-        //     // if((cnt++)%3 == 0)
-        //     // coor_node_id_apply_ptr->send_id_request();
-        //     // coor_node_id_apply_ptr->wait_for_id();
-        //     // while(coor_node_id_apply_ptr->id_set_is_empty());
-        //     ret = coor_node_id_apply_ptr->get_id();
-        // }
-        // std::cout << " get id = " <<  ret <<std::endl;
+        uint64_t end_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
+
+        int sleep_time = 1 + rand() % 5;
+        std::cout << "[INFO] cost " << end_get_id - before_get_id <<"us , sleep " << sleep_time << "s\n";
+        sleep(sleep_time);
     }
-    // std::unique_lock<std::mutex> lock(locker);
-    // cnt_thread++;
-    // if(cnt_thread == 16)
-    // {
-    //     cv.notify_one();
-    // }
-    // lock.unlock();
 }
 
 int main(int argc, char* argv[]) {
 
-    // std::stringstream out_path_tmp ;
-    // out_path_tmp << std::this_thread::get_id(); 
-    // std::string out_path = "client-" +  out_path_tmp.str() + ".log";
-    // std::cout << out_path<< std::endl;
-    // freopen("client.log","w",stdout);
-
     coor_node_id_apply_ptr = new ClientForId;
     coor_node_id_apply_ptr->init(argv[1]);
-
-    uint64_t before_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
 
     for(int i = 0; i < 1; i++)
     {
         std::thread sender(execute_trsanction, atoi(argv[2]));//16个线程在一个计算节点执行事务
         sender.detach();
     }
-    // std::unique_lock<std::mutex> lock(locker);
-    // cv.wait(lock);
-    // lock.unlock();
-    uint64_t end_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
-    // int n = cnt;
-    unsigned long long time_sum = end_get_id - before_get_id;
-    sleep(12);
-    std::cout << "get id time = " << time_sum <<std::endl;
-    // std::cout <<"cnt final = " << n << std::endl;
+    sleep(200);
+    
     return 0;
 }

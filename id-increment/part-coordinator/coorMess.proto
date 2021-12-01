@@ -7,19 +7,19 @@
  * @FilePath: /Percona-tool/id-increment/part-coordinator/coorMess.proto
  */
  
- syntax="proto2";
+ syntax="proto3";
  package CoorMessage;
  
  option cc_generic_services = true;
  
  message CoorRequest {//跨分区事务通知单分区修改M-TSN
-       required int64 m_id = 1;
+      int64 m_id = 1;
  };
  
  message CoorResponse {//单分区事务回复跨分区事务最新事务序号
-       required int32 part_id = 1;
-       required int64 s_id = 2;
-       required int64 m_id = 3;
+      int32 part_id = 1;
+      int64 s_id = 2;
+      //  required int64 m_id = 3;
  };
  
  service CoorService {

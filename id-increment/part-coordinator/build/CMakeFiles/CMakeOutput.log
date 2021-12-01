@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/ubuntu/Percona-tool/id-i
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_13df1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_13df1.dir/build.make CMakeFiles/cmTC_13df1.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e030e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e030e.dir/build.make CMakeFiles/cmTC_e030e.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_13df1.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_13df1.dir/testCCompiler.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_13df1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13df1.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_13df1.dir/testCCompiler.c.o  -o cmTC_13df1 
+Building C object CMakeFiles/cmTC_e030e.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e030e.dir/testCCompiler.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_e030e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e030e.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e030e.dir/testCCompiler.c.o  -o cmTC_e030e 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_71d11/fast"
-/usr/bin/make -f CMakeFiles/cmTC_71d11.dir/build.make CMakeFiles/cmTC_71d11.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5ecaf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5ecaf.dir/build.make CMakeFiles/cmTC_5ecaf.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_71d11
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71d11.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o  -o cmTC_71d11 
+Building C object CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_5ecaf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ecaf.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o  -o cmTC_5ecaf 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_71d11' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cco8mlE0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_71d11 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_71d11' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5ecaf' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvbDGbh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5ecaf /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5ecaf' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_71d11/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_71d11.dir/build.make CMakeFiles/cmTC_71d11.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5ecaf/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5ecaf.dir/build.make CMakeFiles/cmTC_5ecaf.dir/build]
   ignore line: [make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_71d11]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71d11.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o  -o cmTC_71d11 ]
+  ignore line: [Building C object CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_5ecaf]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ecaf.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o  -o cmTC_5ecaf ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_71d11' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cco8mlE0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_71d11 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_5ecaf' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvbDGbh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5ecaf /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cco8mlE0.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccvbDGbh.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_71d11] ==> ignore
+    arg [cmTC_5ecaf] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -130,7 +130,7 @@ Parsed C implicit link information from above output:
     arg [-L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib] ==> dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
     arg [-L.] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_71d11.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_5ecaf.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -164,14 +164,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ce45b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ce45b.dir/build.make CMakeFiles/cmTC_ce45b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_72d31/fast"
+/usr/bin/make -f CMakeFiles/cmTC_72d31.dir/build.make CMakeFiles/cmTC_72d31.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ce45b.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_ce45b.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_ce45b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce45b.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ce45b.dir/feature_tests.c.o  -o cmTC_ce45b 
+Building C object CMakeFiles/cmTC_72d31.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_72d31.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_72d31
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72d31.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_72d31.dir/feature_tests.c.o  -o cmTC_72d31 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -184,14 +184,14 @@ make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordina
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f2990/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f2990.dir/build.make CMakeFiles/cmTC_f2990.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d875c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d875c.dir/build.make CMakeFiles/cmTC_d875c.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f2990.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_f2990.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f2990
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2990.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f2990.dir/feature_tests.c.o  -o cmTC_f2990 
+Building C object CMakeFiles/cmTC_d875c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_d875c.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d875c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d875c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d875c.dir/feature_tests.c.o  -o cmTC_d875c 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -204,14 +204,14 @@ make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordina
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_37039/fast"
-/usr/bin/make -f CMakeFiles/cmTC_37039.dir/build.make CMakeFiles/cmTC_37039.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4ef9f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4ef9f.dir/build.make CMakeFiles/cmTC_4ef9f.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_37039.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_37039.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_37039
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37039.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_37039.dir/feature_tests.c.o  -o cmTC_37039 
+Building C object CMakeFiles/cmTC_4ef9f.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_4ef9f.dir/feature_tests.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_4ef9f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ef9f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4ef9f.dir/feature_tests.c.o  -o cmTC_4ef9f 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -222,28 +222,28 @@ make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordina
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_02171/fast"
-/usr/bin/make -f CMakeFiles/cmTC_02171.dir/build.make CMakeFiles/cmTC_02171.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3cbc1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3cbc1.dir/build.make CMakeFiles/cmTC_3cbc1.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_02171.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_02171.dir/testCXXCompiler.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_02171
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02171.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_02171.dir/testCXXCompiler.cxx.o  -o cmTC_02171 
+Building CXX object CMakeFiles/cmTC_3cbc1.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_3cbc1.dir/testCXXCompiler.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_3cbc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cbc1.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_3cbc1.dir/testCXXCompiler.cxx.o  -o cmTC_3cbc1 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f375e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f375e.dir/build.make CMakeFiles/cmTC_f375e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ea6f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ea6f9.dir/build.make CMakeFiles/cmTC_ea6f9.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_f375e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f375e.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f375e 
+Building CXX object CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_ea6f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea6f9.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ea6f9 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -255,9 +255,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f375e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccS2BMNl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f375e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f375e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ea6f9' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccthDT3w.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ea6f9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ea6f9' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -265,14 +265,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f375e/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f375e.dir/build.make CMakeFiles/cmTC_f375e.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ea6f9/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ea6f9.dir/build.make CMakeFiles/cmTC_ea6f9.dir/build]
   ignore line: [make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_f375e]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f375e.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f375e ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_ea6f9]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea6f9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ea6f9 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -284,13 +284,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f375e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccS2BMNl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f375e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ea6f9' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccthDT3w.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ea6f9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccS2BMNl.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccthDT3w.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -309,7 +309,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f375e] ==> ignore
+    arg [cmTC_ea6f9] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -324,7 +324,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/home/ubuntu/dev_env/brpc_env/protobuf-install/lib] ==> dir [/home/ubuntu/dev_env/brpc_env/protobuf-install/lib]
     arg [-L.] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_f375e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_ea6f9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -354,14 +354,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_be75c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_be75c.dir/build.make CMakeFiles/cmTC_be75c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_88b9b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_88b9b.dir/build.make CMakeFiles/cmTC_88b9b.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_be75c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_be75c.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_be75c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be75c.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_be75c.dir/feature_tests.cxx.o  -o cmTC_be75c 
+Building CXX object CMakeFiles/cmTC_88b9b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_88b9b.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_88b9b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88b9b.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_88b9b.dir/feature_tests.cxx.o  -o cmTC_88b9b 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -427,14 +427,14 @@ make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordina
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a48df/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a48df.dir/build.make CMakeFiles/cmTC_a48df.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_aed47/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aed47.dir/build.make CMakeFiles/cmTC_aed47.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a48df.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_a48df.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a48df
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a48df.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a48df.dir/feature_tests.cxx.o  -o cmTC_a48df 
+Building CXX object CMakeFiles/cmTC_aed47.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_aed47.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_aed47
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aed47.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_aed47.dir/feature_tests.cxx.o  -o cmTC_aed47 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -500,14 +500,14 @@ make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordina
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_463c4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_463c4.dir/build.make CMakeFiles/cmTC_463c4.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_814e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_814e2.dir/build.make CMakeFiles/cmTC_814e2.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_463c4.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_463c4.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_463c4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_463c4.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_463c4.dir/feature_tests.cxx.o  -o cmTC_463c4 
+Building CXX object CMakeFiles/cmTC_814e2.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_814e2.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_814e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_814e2.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_814e2.dir/feature_tests.cxx.o  -o cmTC_814e2 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -573,14 +573,14 @@ make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordina
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_dae4c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_dae4c.dir/build.make CMakeFiles/cmTC_dae4c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_da74b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_da74b.dir/build.make CMakeFiles/cmTC_da74b.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_dae4c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_dae4c.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_dae4c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dae4c.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_dae4c.dir/feature_tests.cxx.o  -o cmTC_dae4c 
+Building CXX object CMakeFiles/cmTC_da74b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_da74b.dir/feature_tests.cxx.o -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_da74b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da74b.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_da74b.dir/feature_tests.cxx.o  -o cmTC_da74b 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
@@ -644,28 +644,28 @@ make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordina
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2cf0d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2cf0d.dir/build.make CMakeFiles/cmTC_2cf0d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2075c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2075c.dir/build.make CMakeFiles/cmTC_2075c.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2cf0d.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_2cf0d.dir/CheckIncludeFile.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_2cf0d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cf0d.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2cf0d.dir/CheckIncludeFile.c.o  -o cmTC_2cf0d 
+Building C object CMakeFiles/cmTC_2075c.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2075c.dir/CheckIncludeFile.c.o   -c /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2075c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2075c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2075c.dir/CheckIncludeFile.c.o  -o cmTC_2075c 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ef1b7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ef1b7.dir/build.make CMakeFiles/cmTC_ef1b7.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f5d1f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f5d1f.dir/build.make CMakeFiles/cmTC_f5d1f.dir/build
 make[1]: Entering directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ef1b7.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ef1b7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ef1b7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef1b7.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ef1b7.dir/CheckFunctionExists.c.o  -o cmTC_ef1b7 -lpthread 
+Building C object CMakeFiles/cmTC_f5d1f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f5d1f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f5d1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5d1f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f5d1f.dir/CheckFunctionExists.c.o  -o cmTC_f5d1f -lpthread 
 make[1]: Leaving directory '/home/ubuntu/Percona-tool/id-increment/part-coordinator/build/CMakeFiles/CMakeTmp'
 
 

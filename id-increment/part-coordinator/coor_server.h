@@ -17,6 +17,7 @@
 #include <ctime>
 #include <map>
 #include <set>
+#include <shared_mutex>
 #include <mutex>
 #include <vector>
 #include <thread>
@@ -34,13 +35,14 @@ extern int32_t part_id;
 class ClientForCoor
 {
     private:
-    // std::string pn_addr;
+    std::vector<std::string> pn_addr;
     brpc::Channel channel;
     CoorMessage::CoorService_Stub * stub;
 
     public:
     int init(std::string addr);
     int send_mid_update(int64_t new_mid);
+    int set_pn_addr(std::vector<std::string> addrs);
 };
 
 class CoorMessImpl : public CoorMessage::CoorService{
@@ -81,17 +83,9 @@ class ClientForId
     public:
         int init(std::string addr);
         int send_id_request();
-        int get_id();
-        bool id_set_is_empty();
-        int wait_for_id();
 };
 
 class IDIncreImpl : public IDIncrement::IDService{
-    // private:
-    // std::mutex id_lock;
-    // int64_t s_id, m_id;
-    // int32_t part_id;
-
     public:
     IDIncreImpl(){};
     virtual ~IDIncreImpl(){};
@@ -112,8 +106,7 @@ class ServerForId
     int set_partid(int32_t p_id);
 };
 
-extern ServerForId *coor_node_id_allocator_ptr;
 extern std::vector<ClientForCoor*> coor_node_id_heartbeat_send_message_ptr_list;
 extern ClientForId *coor_node_id_apply_ptr;
 extern ServerForCoor *coor_node_id_heartbeat_receive_message_ptr;
-extern int cnt;
+extern ServerForId *coor_node_id_allocator_ptr;

@@ -19,12 +19,20 @@
 #endif
 // @@protoc_insertion_point(includes)
 
+namespace protobuf_id_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_id_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_IDResponse_EitherPartTsnEntry_DoNotUse;
+}  // namespace protobuf_id_2eproto
 namespace IDIncrement {
 class IDRequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<IDRequest>
       _instance;
 } _IDRequest_default_instance_;
+class IDResponse_EitherPartTsnEntry_DoNotUseDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<IDResponse_EitherPartTsnEntry_DoNotUse>
+      _instance;
+} _IDResponse_EitherPartTsnEntry_DoNotUse_default_instance_;
 class IDResponseDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<IDResponse>
@@ -46,6 +54,19 @@ static void InitDefaultsIDRequest() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_IDRequest =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsIDRequest}, {}};
 
+static void InitDefaultsIDResponse_EitherPartTsnEntry_DoNotUse() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::IDIncrement::_IDResponse_EitherPartTsnEntry_DoNotUse_default_instance_;
+    new (ptr) ::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse();
+  }
+  ::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_IDResponse_EitherPartTsnEntry_DoNotUse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsIDResponse_EitherPartTsnEntry_DoNotUse}, {}};
+
 static void InitDefaultsIDResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -57,26 +78,36 @@ static void InitDefaultsIDResponse() {
   ::IDIncrement::IDResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_IDResponse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsIDResponse}, {}};
+::google::protobuf::internal::SCCInfo<1> scc_info_IDResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsIDResponse}, {
+      &protobuf_id_2eproto::scc_info_IDResponse_EitherPartTsnEntry_DoNotUse.base,}};
 
 void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_IDRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_IDResponse_EitherPartTsnEntry_DoNotUse.base);
   ::google::protobuf::internal::InitSCC(&scc_info_IDResponse.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[2];
+::google::protobuf::Metadata file_level_metadata[3];
 const ::google::protobuf::ServiceDescriptor* file_level_service_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDRequest, _has_bits_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDRequest, page_table_no_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse, key_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse, value_),
   0,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse, _has_bits_),
+  1,
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -84,17 +115,17 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse, part_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse, s_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse, m_id_),
-  2,
-  0,
-  1,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::IDIncrement::IDResponse, either_part_tsn_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 6, sizeof(::IDIncrement::IDRequest)},
-  { 7, 15, sizeof(::IDIncrement::IDResponse)},
+  { 0, -1, sizeof(::IDIncrement::IDRequest)},
+  { 6, 13, sizeof(::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse)},
+  { 15, -1, sizeof(::IDIncrement::IDResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::IDIncrement::_IDRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::IDIncrement::_IDResponse_EitherPartTsnEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::IDIncrement::_IDResponse_default_instance_),
 };
 
@@ -113,20 +144,24 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 3);
 }
 
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\010id.proto\022\013IDIncrement\"\"\n\tIDRequest\022\025\n\r"
-      "page_table_no\030\001 \002(\t\"9\n\nIDResponse\022\017\n\007par"
-      "t_id\030\001 \002(\005\022\014\n\004s_id\030\002 \002(\003\022\014\n\004m_id\030\003 \002(\0032E"
-      "\n\tIDService\0228\n\005IDInc\022\026.IDIncrement.IDReq"
-      "uest\032\027.IDIncrement.IDResponseB\003\200\001\001"
+      "page_table_no\030\001 \001(\t\"\264\001\n\nIDResponse\022\017\n\007pa"
+      "rt_id\030\001 \001(\005\022\014\n\004s_id\030\002 \001(\003\022\014\n\004m_id\030\003 \001(\003\022"
+      "C\n\017either_part_tsn\030\004 \003(\0132*.IDIncrement.I"
+      "DResponse.EitherPartTsnEntry\0324\n\022EitherPa"
+      "rtTsnEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\003:\002"
+      "8\0012E\n\tIDService\0228\n\005IDInc\022\026.IDIncrement.I"
+      "DRequest\032\027.IDIncrement.IDResponseB\003\200\001\001b\006"
+      "proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 194);
+      descriptor, 326);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "id.proto", &protobuf_RegisterTypes);
 }
@@ -161,11 +196,10 @@ IDRequest::IDRequest()
 }
 IDRequest::IDRequest(const IDRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   page_table_no_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_page_table_no()) {
+  if (from.page_table_no().size() > 0) {
     page_table_no_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.page_table_no_);
   }
   // @@protoc_insertion_point(copy_constructor:IDIncrement.IDRequest)
@@ -204,11 +238,7 @@ void IDRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    page_table_no_.ClearNonDefaultToEmptyNoArena();
-  }
-  _has_bits_.Clear();
+  page_table_no_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
@@ -222,16 +252,16 @@ bool IDRequest::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string page_table_no = 1;
+      // string page_table_no = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_page_table_no()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->page_table_no().data(), static_cast<int>(this->page_table_no().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "IDIncrement.IDRequest.page_table_no");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "IDIncrement.IDRequest.page_table_no"));
         } else {
           goto handle_unusual;
         }
@@ -264,20 +294,19 @@ void IDRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required string page_table_no = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string page_table_no = 1;
+  if (this->page_table_no().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->page_table_no().data(), static_cast<int>(this->page_table_no().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "IDIncrement.IDRequest.page_table_no");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->page_table_no(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:IDIncrement.IDRequest)
 }
@@ -289,21 +318,20 @@ void IDRequest::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required string page_table_no = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string page_table_no = 1;
+  if (this->page_table_no().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->page_table_no().data(), static_cast<int>(this->page_table_no().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "IDIncrement.IDRequest.page_table_no");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->page_table_no(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IDIncrement.IDRequest)
   return target;
@@ -313,17 +341,18 @@ size_t IDRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IDIncrement.IDRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // required string page_table_no = 1;
-  if (has_page_table_no()) {
+  // string page_table_no = 1;
+  if (this->page_table_no().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->page_table_no());
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -351,8 +380,8 @@ void IDRequest::MergeFrom(const IDRequest& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_page_table_no()) {
-    set_has_page_table_no();
+  if (from.page_table_no().size() > 0) {
+
     page_table_no_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.page_table_no_);
   }
 }
@@ -372,7 +401,6 @@ void IDRequest::CopyFrom(const IDRequest& from) {
 }
 
 bool IDRequest::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   return true;
 }
 
@@ -384,7 +412,6 @@ void IDRequest::InternalSwap(IDRequest* other) {
   using std::swap;
   page_table_no_.Swap(&other->page_table_no_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -396,12 +423,30 @@ void IDRequest::InternalSwap(IDRequest* other) {
 
 // ===================================================================
 
+IDResponse_EitherPartTsnEntry_DoNotUse::IDResponse_EitherPartTsnEntry_DoNotUse() {}
+IDResponse_EitherPartTsnEntry_DoNotUse::IDResponse_EitherPartTsnEntry_DoNotUse(::google::protobuf::Arena* arena) : SuperType(arena) {}
+void IDResponse_EitherPartTsnEntry_DoNotUse::MergeFrom(const IDResponse_EitherPartTsnEntry_DoNotUse& other) {
+  MergeFromInternal(other);
+}
+::google::protobuf::Metadata IDResponse_EitherPartTsnEntry_DoNotUse::GetMetadata() const {
+  ::protobuf_id_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_id_2eproto::file_level_metadata[1];
+}
+void IDResponse_EitherPartTsnEntry_DoNotUse::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+
+
+// ===================================================================
+
 void IDResponse::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int IDResponse::kPartIdFieldNumber;
 const int IDResponse::kSIdFieldNumber;
 const int IDResponse::kMIdFieldNumber;
+const int IDResponse::kEitherPartTsnFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 IDResponse::IDResponse()
@@ -413,9 +458,9 @@ IDResponse::IDResponse()
 }
 IDResponse::IDResponse(const IDResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  either_part_tsn_.MergeFrom(from.either_part_tsn_);
   ::memcpy(&s_id_, &from.s_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&part_id_) -
     reinterpret_cast<char*>(&s_id_)) + sizeof(part_id_));
@@ -456,13 +501,10 @@ void IDResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 7u) {
-    ::memset(&s_id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&part_id_) -
-        reinterpret_cast<char*>(&s_id_)) + sizeof(part_id_));
-  }
-  _has_bits_.Clear();
+  either_part_tsn_.Clear();
+  ::memset(&s_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&part_id_) -
+      reinterpret_cast<char*>(&s_id_)) + sizeof(part_id_));
   _internal_metadata_.Clear();
 }
 
@@ -476,11 +518,11 @@ bool IDResponse::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 part_id = 1;
+      // int32 part_id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          set_has_part_id();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &part_id_)));
@@ -490,11 +532,11 @@ bool IDResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // required int64 s_id = 2;
+      // int64 s_id = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          set_has_s_id();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &s_id_)));
@@ -504,14 +546,33 @@ bool IDResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // required int64 m_id = 3;
+      // int64 m_id = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          set_has_m_id();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &m_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<int32, int64> either_part_tsn = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          IDResponse_EitherPartTsnEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
+              IDResponse_EitherPartTsnEntry_DoNotUse,
+              ::google::protobuf::int32, ::google::protobuf::int64,
+              ::google::protobuf::internal::WireFormatLite::TYPE_INT32,
+              ::google::protobuf::internal::WireFormatLite::TYPE_INT64,
+              0 >,
+            ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 > > parser(&either_part_tsn_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
         } else {
           goto handle_unusual;
         }
@@ -544,25 +605,63 @@ void IDResponse::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 part_id = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // int32 part_id = 1;
+  if (this->part_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->part_id(), output);
   }
 
-  // required int64 s_id = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // int64 s_id = 2;
+  if (this->s_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->s_id(), output);
   }
 
-  // required int64 m_id = 3;
-  if (cached_has_bits & 0x00000002u) {
+  // int64 m_id = 3;
+  if (this->m_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->m_id(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  // map<int32, int64> either_part_tsn = 4;
+  if (!this->either_part_tsn().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (output->IsSerializationDeterministic() &&
+        this->either_part_tsn().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->either_part_tsn().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->either_part_tsn().begin();
+          it != this->either_part_tsn().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::std::unique_ptr<IDResponse_EitherPartTsnEntry_DoNotUse> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(either_part_tsn_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            4, *entry, output);
+      }
+    } else {
+      ::std::unique_ptr<IDResponse_EitherPartTsnEntry_DoNotUse> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->either_part_tsn().begin();
+          it != this->either_part_tsn().end(); ++it) {
+        entry.reset(either_part_tsn_.NewEntryWrapper(
+            it->first, it->second));
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+            4, *entry, output);
+      }
+    }
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:IDIncrement.IDResponse)
 }
@@ -574,85 +673,116 @@ void IDResponse::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 part_id = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // int32 part_id = 1;
+  if (this->part_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->part_id(), target);
   }
 
-  // required int64 s_id = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // int64 s_id = 2;
+  if (this->s_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->s_id(), target);
   }
 
-  // required int64 m_id = 3;
-  if (cached_has_bits & 0x00000002u) {
+  // int64 m_id = 3;
+  if (this->m_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->m_id(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  // map<int32, int64> either_part_tsn = 4;
+  if (!this->either_part_tsn().empty()) {
+    typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_pointer
+        ConstPtr;
+    typedef ::google::protobuf::internal::SortItem< ::google::protobuf::int32, ConstPtr > SortItem;
+    typedef ::google::protobuf::internal::CompareByFirstField<SortItem> Less;
+
+    if (deterministic &&
+        this->either_part_tsn().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->either_part_tsn().size()]);
+      typedef ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->either_part_tsn().begin();
+          it != this->either_part_tsn().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      ::std::unique_ptr<IDResponse_EitherPartTsnEntry_DoNotUse> entry;
+      for (size_type i = 0; i < n; i++) {
+        entry.reset(either_part_tsn_.NewEntryWrapper(
+            items[static_cast<ptrdiff_t>(i)].second->first, items[static_cast<ptrdiff_t>(i)].second->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       4, *entry, deterministic, target);
+;
+      }
+    } else {
+      ::std::unique_ptr<IDResponse_EitherPartTsnEntry_DoNotUse> entry;
+      for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+          it = this->either_part_tsn().begin();
+          it != this->either_part_tsn().end(); ++it) {
+        entry.reset(either_part_tsn_.NewEntryWrapper(
+            it->first, it->second));
+        target = ::google::protobuf::internal::WireFormatLite::
+                   InternalWriteMessageNoVirtualToArray(
+                       4, *entry, deterministic, target);
+;
+      }
+    }
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IDIncrement.IDResponse)
   return target;
 }
 
-size_t IDResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:IDIncrement.IDResponse)
-  size_t total_size = 0;
-
-  if (has_s_id()) {
-    // required int64 s_id = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->s_id());
-  }
-
-  if (has_m_id()) {
-    // required int64 m_id = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->m_id());
-  }
-
-  if (has_part_id()) {
-    // required int32 part_id = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->part_id());
-  }
-
-  return total_size;
-}
 size_t IDResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IDIncrement.IDResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  if (((_has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required int64 s_id = 2;
+  // map<int32, int64> either_part_tsn = 4;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->either_part_tsn_size());
+  {
+    ::std::unique_ptr<IDResponse_EitherPartTsnEntry_DoNotUse> entry;
+    for (::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >::const_iterator
+        it = this->either_part_tsn().begin();
+        it != this->either_part_tsn().end(); ++it) {
+      entry.reset(either_part_tsn_.NewEntryWrapper(it->first, it->second));
+      total_size += ::google::protobuf::internal::WireFormatLite::
+          MessageSizeNoVirtual(*entry);
+    }
+  }
+
+  // int64 s_id = 2;
+  if (this->s_id() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->s_id());
+  }
 
-    // required int64 m_id = 3;
+  // int64 m_id = 3;
+  if (this->m_id() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->m_id());
+  }
 
-    // required int32 part_id = 1;
+  // int32 part_id = 1;
+  if (this->part_id() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->part_id());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -680,18 +810,15 @@ void IDResponse::MergeFrom(const IDResponse& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      s_id_ = from.s_id_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      m_id_ = from.m_id_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      part_id_ = from.part_id_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  either_part_tsn_.MergeFrom(from.either_part_tsn_);
+  if (from.s_id() != 0) {
+    set_s_id(from.s_id());
+  }
+  if (from.m_id() != 0) {
+    set_m_id(from.m_id());
+  }
+  if (from.part_id() != 0) {
+    set_part_id(from.part_id());
   }
 }
 
@@ -710,7 +837,6 @@ void IDResponse::CopyFrom(const IDResponse& from) {
 }
 
 bool IDResponse::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
   return true;
 }
 
@@ -720,10 +846,10 @@ void IDResponse::Swap(IDResponse* other) {
 }
 void IDResponse::InternalSwap(IDResponse* other) {
   using std::swap;
+  either_part_tsn_.Swap(&other->either_part_tsn_);
   swap(s_id_, other->s_id_);
   swap(m_id_, other->m_id_);
   swap(part_id_, other->part_id_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -824,6 +950,9 @@ namespace google {
 namespace protobuf {
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::IDIncrement::IDRequest* Arena::CreateMaybeMessage< ::IDIncrement::IDRequest >(Arena* arena) {
   return Arena::CreateInternal< ::IDIncrement::IDRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse* Arena::CreateMaybeMessage< ::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::IDIncrement::IDResponse_EitherPartTsnEntry_DoNotUse >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::IDIncrement::IDResponse* Arena::CreateMaybeMessage< ::IDIncrement::IDResponse >(Arena* arena) {
   return Arena::CreateInternal< ::IDIncrement::IDResponse >(arena);

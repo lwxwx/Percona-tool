@@ -1,4 +1,0 @@
-/home/ubuntu/Percona-tool/id-increment/origin-id-increment/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/Percona-tool/id-increment/origin-id-increment/build/CMakeFiles/client.dir
-/home/ubuntu/Percona-tool/id-increment/origin-id-increment/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/Percona-tool/id-increment/origin-id-increment/build/CMakeFiles/server.dir

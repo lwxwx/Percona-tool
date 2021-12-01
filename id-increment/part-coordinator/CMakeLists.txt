@@ -107,7 +107,7 @@ message(${PROTO_SRCS})
 message(${PROTO_HDRS})
 include_directories(${PROTOBUF_INCLUDE_DIR})
 
-SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread -fPIC")
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++17 -pthread -fPIC")
 find_package (Threads)
 add_executable(client client.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 add_executable(server server.cpp ${PROTO_SRCS} ${PROTO_HDRS})

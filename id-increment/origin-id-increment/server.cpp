@@ -44,7 +44,7 @@ public:
         // char* dt = ctime(&now);
         
         // idmap[butil::endpoint2str(cntl->remote_side()).c_str()]=id;
-        cout<<"Received request from " << cntl->remote_side() << " to " << cntl->local_side()<< ": " << request->message()<<" ,allot id: "<<id<<endl;
+        // cout<<"Received request from " << cntl->remote_side() << " to " << cntl->local_side()<< ": " << request->message()<<" ,allot id: "<<id<<endl;
         // Fill response.
         response->set_message(to_string(id));
         // idmap[id]=butil::endpoint2str(cntl->remote_side()).c_str();
