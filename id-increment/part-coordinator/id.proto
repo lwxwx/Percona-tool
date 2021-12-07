@@ -7,28 +7,28 @@
  * @FilePath: /Percona-tool/id-increment/part-coordinator/id.proto
  */
  
-syntax="proto3";
-package IDIncrement;
-
-option cc_generic_services = true;
-
-message IDRequest {
-      string page_table_no = 1;
-      // repeated int32 part_id = 2;
-};
-
-// message PartMessage {
-//       required int64 p_id = 1;//分区序号
-//       required int64 s_id = 2;//单分区id 
-// };
-
-message IDResponse {
-      int32 part_id = 1;//分区序号
-      int64 s_id = 2;//单分区id
-      int64 m_id = 3;//跨分区id   
-      map<int32,int64> either_part_tsn = 4;//只有p0需要   
-};
-
-service IDService {
-      rpc IDInc(IDRequest) returns (IDResponse);
-};
+ syntax="proto2";
+ package IDIncrement;
+ 
+ option cc_generic_services = true;
+ 
+ message IDRequest {
+       required string page_table_no = 1;
+       // repeated int32 part_id = 2;
+ };
+ 
+ // message PartMessage {
+ //       required int64 p_id = 1;//分区序号
+ //       required int64 s_id = 2;//单分区id 
+ // };
+ 
+ message IDResponse {
+       required int32 part_id = 1;//分区序号
+       required int64 s_id = 2;//单分区id
+       required int64 m_id = 3;//跨分区id   
+       map<int32,int64> either_part_tsn = 4;//只有p0需要   
+ };
+ 
+ service IDService {
+       rpc IDInc(IDRequest) returns (IDResponse);
+ };

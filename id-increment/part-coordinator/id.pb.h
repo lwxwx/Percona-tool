@@ -97,6 +97,13 @@ class IDRequest : public ::google::protobuf::Message /* @@protoc_insertion_point
     return *this;
   }
   #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
   static const ::google::protobuf::Descriptor* descriptor();
   static const IDRequest& default_instance();
 
@@ -158,7 +165,8 @@ class IDRequest : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // string page_table_no = 1;
+  // required string page_table_no = 1;
+  bool has_page_table_no() const;
   void clear_page_table_no();
   static const int kPageTableNoFieldNumber = 1;
   const ::std::string& page_table_no() const;
@@ -174,10 +182,13 @@ class IDRequest : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // @@protoc_insertion_point(class_scope:IDIncrement.IDRequest)
  private:
+  void set_has_page_table_no();
+  void clear_has_page_table_no();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr page_table_no_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr page_table_no_;
   friend struct ::protobuf_id_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -229,6 +240,13 @@ class IDResponse : public ::google::protobuf::Message /* @@protoc_insertion_poin
     return *this;
   }
   #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
   static const ::google::protobuf::Descriptor* descriptor();
   static const IDResponse& default_instance();
 
@@ -300,19 +318,22 @@ class IDResponse : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::Map< ::google::protobuf::int32, ::google::protobuf::int64 >*
       mutable_either_part_tsn();
 
-  // int64 s_id = 2;
+  // required int64 s_id = 2;
+  bool has_s_id() const;
   void clear_s_id();
   static const int kSIdFieldNumber = 2;
   ::google::protobuf::int64 s_id() const;
   void set_s_id(::google::protobuf::int64 value);
 
-  // int64 m_id = 3;
+  // required int64 m_id = 3;
+  bool has_m_id() const;
   void clear_m_id();
   static const int kMIdFieldNumber = 3;
   ::google::protobuf::int64 m_id() const;
   void set_m_id(::google::protobuf::int64 value);
 
-  // int32 part_id = 1;
+  // required int32 part_id = 1;
+  bool has_part_id() const;
   void clear_part_id();
   static const int kPartIdFieldNumber = 1;
   ::google::protobuf::int32 part_id() const;
@@ -320,8 +341,19 @@ class IDResponse : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // @@protoc_insertion_point(class_scope:IDIncrement.IDResponse)
  private:
+  void set_has_part_id();
+  void clear_has_part_id();
+  void set_has_s_id();
+  void clear_has_s_id();
+  void set_has_m_id();
+  void clear_has_m_id();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::MapField<
       IDResponse_EitherPartTsnEntry_DoNotUse,
       ::google::protobuf::int32, ::google::protobuf::int64,
@@ -331,7 +363,6 @@ class IDResponse : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::int64 s_id_;
   ::google::protobuf::int64 m_id_;
   ::google::protobuf::int32 part_id_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_id_2eproto::TableStruct;
 };
 // ===================================================================
@@ -404,22 +435,32 @@ class IDService_Stub : public IDService {
 #endif  // __GNUC__
 // IDRequest
 
-// string page_table_no = 1;
+// required string page_table_no = 1;
+inline bool IDRequest::has_page_table_no() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void IDRequest::set_has_page_table_no() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void IDRequest::clear_has_page_table_no() {
+  _has_bits_[0] &= ~0x00000001u;
+}
 inline void IDRequest::clear_page_table_no() {
   page_table_no_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_page_table_no();
 }
 inline const ::std::string& IDRequest::page_table_no() const {
   // @@protoc_insertion_point(field_get:IDIncrement.IDRequest.page_table_no)
   return page_table_no_.GetNoArena();
 }
 inline void IDRequest::set_page_table_no(const ::std::string& value) {
-  
+  set_has_page_table_no();
   page_table_no_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:IDIncrement.IDRequest.page_table_no)
 }
 #if LANG_CXX11
 inline void IDRequest::set_page_table_no(::std::string&& value) {
-  
+  set_has_page_table_no();
   page_table_no_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:IDIncrement.IDRequest.page_table_no)
@@ -427,31 +468,34 @@ inline void IDRequest::set_page_table_no(::std::string&& value) {
 #endif
 inline void IDRequest::set_page_table_no(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_page_table_no();
   page_table_no_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:IDIncrement.IDRequest.page_table_no)
 }
 inline void IDRequest::set_page_table_no(const char* value, size_t size) {
-  
+  set_has_page_table_no();
   page_table_no_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:IDIncrement.IDRequest.page_table_no)
 }
 inline ::std::string* IDRequest::mutable_page_table_no() {
-  
+  set_has_page_table_no();
   // @@protoc_insertion_point(field_mutable:IDIncrement.IDRequest.page_table_no)
   return page_table_no_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* IDRequest::release_page_table_no() {
   // @@protoc_insertion_point(field_release:IDIncrement.IDRequest.page_table_no)
-  
-  return page_table_no_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_page_table_no()) {
+    return NULL;
+  }
+  clear_has_page_table_no();
+  return page_table_no_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void IDRequest::set_allocated_page_table_no(::std::string* page_table_no) {
   if (page_table_no != NULL) {
-    
+    set_has_page_table_no();
   } else {
-    
+    clear_has_page_table_no();
   }
   page_table_no_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), page_table_no);
   // @@protoc_insertion_point(field_set_allocated:IDIncrement.IDRequest.page_table_no)
@@ -463,44 +507,74 @@ inline void IDRequest::set_allocated_page_table_no(::std::string* page_table_no)
 
 // IDResponse
 
-// int32 part_id = 1;
+// required int32 part_id = 1;
+inline bool IDResponse::has_part_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void IDResponse::set_has_part_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void IDResponse::clear_has_part_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
 inline void IDResponse::clear_part_id() {
   part_id_ = 0;
+  clear_has_part_id();
 }
 inline ::google::protobuf::int32 IDResponse::part_id() const {
   // @@protoc_insertion_point(field_get:IDIncrement.IDResponse.part_id)
   return part_id_;
 }
 inline void IDResponse::set_part_id(::google::protobuf::int32 value) {
-  
+  set_has_part_id();
   part_id_ = value;
   // @@protoc_insertion_point(field_set:IDIncrement.IDResponse.part_id)
 }
 
-// int64 s_id = 2;
+// required int64 s_id = 2;
+inline bool IDResponse::has_s_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void IDResponse::set_has_s_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void IDResponse::clear_has_s_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
 inline void IDResponse::clear_s_id() {
   s_id_ = GOOGLE_LONGLONG(0);
+  clear_has_s_id();
 }
 inline ::google::protobuf::int64 IDResponse::s_id() const {
   // @@protoc_insertion_point(field_get:IDIncrement.IDResponse.s_id)
   return s_id_;
 }
 inline void IDResponse::set_s_id(::google::protobuf::int64 value) {
-  
+  set_has_s_id();
   s_id_ = value;
   // @@protoc_insertion_point(field_set:IDIncrement.IDResponse.s_id)
 }
 
-// int64 m_id = 3;
+// required int64 m_id = 3;
+inline bool IDResponse::has_m_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void IDResponse::set_has_m_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void IDResponse::clear_has_m_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
 inline void IDResponse::clear_m_id() {
   m_id_ = GOOGLE_LONGLONG(0);
+  clear_has_m_id();
 }
 inline ::google::protobuf::int64 IDResponse::m_id() const {
   // @@protoc_insertion_point(field_get:IDIncrement.IDResponse.m_id)
   return m_id_;
 }
 inline void IDResponse::set_m_id(::google::protobuf::int64 value) {
-  
+  set_has_m_id();
   m_id_ = value;
   // @@protoc_insertion_point(field_set:IDIncrement.IDResponse.m_id)
 }

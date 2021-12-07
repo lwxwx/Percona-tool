@@ -72,7 +72,7 @@ int main(int argc, char* argv[]) {
         coor_message.detach();
     }
 
-    sleep(1200);
+    sleep(120000);
 
     return 0;
 }
