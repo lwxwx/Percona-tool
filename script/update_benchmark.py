@@ -20,6 +20,7 @@ update_bench_load = int(cfg.get('update_benchmark', 'update_bench_load'))
 data_size=int(cfg.get('update_benchmark', 'data_size'))
 time_s=float(cfg.get('update_benchmark', 'time_s'))
 thread_num=int(cfg.get('update_benchmark', 'thread_num'))
+sql_cnt=int(cfg.get('update_benchmark', 'sql_cnt'))
 
 port = int(cfg.get('build_env', 'port'))
 user = cfg.get('build_env', 'usr')
@@ -45,7 +46,7 @@ def update_run(thread_id):
     cursor = conn.cursor()
     cursor.execute('use test')
     # while((datetime.datetime.now()-thread_begin).total_seconds()<time_s):     
-    for kk in range(0,500):
+    for kk in range(0,sql_cnt):
         try:
             # conn = POOL.connection()
             # cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -106,7 +107,7 @@ if(update_bench_load == 1):
     conn.close()
 else:
     try:  
-        print("start test",time_s,"sec...")
+        print("[",time.asctime(time.localtime(time.time())),"]start test",time_s,"sec...")
         threads =[]
         for i in range (0,thread_num):
             thread=threading.Thread(target=update_run,kwargs={"thread_id":i})
