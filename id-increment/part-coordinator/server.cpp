@@ -41,6 +41,8 @@ void coor_run()
 
 int main(int argc, char* argv[]) {
 
+    // std::string log_path = "server"+std::to_string(part_id)+".log";
+    // freopen("server.log","w",stdout);
     int part_id = atoi(argv[1]);
     int port = atoi(argv[2]);
 
@@ -51,7 +53,7 @@ int main(int argc, char* argv[]) {
     std::thread allocator(id_allocator_run);
     allocator.detach();    
 
-    std::string pn_addr[] = {"10.24.1.166:60087"};
+    std::string pn_addr[] = {"10.24.1.27:60087"};
     if(part_id == 0)
     {
         std::cout << "part 0" << std::endl;
@@ -72,7 +74,7 @@ int main(int argc, char* argv[]) {
         coor_message.detach();
     }
 
-    sleep(120000);
+    sleep(12000);
 
     return 0;
 }

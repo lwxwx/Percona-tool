@@ -36,13 +36,15 @@ void execute_trsanction(int num)
         coor_node_id_apply_ptr->send_id_request();
         uint64_t end_get_id = (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count();
 
-        int sleep_time = 1 + rand() % 5;
-        std::cout << "[INFO] cost " << end_get_id - before_get_id <<"us , sleep " << sleep_time << "s\n";
-        sleep(sleep_time);
+        // int sleep_time = rand() % 1 + 1;
+        // std::cout << "[INFO] cost " << end_get_id - before_get_id <<"us , sleep " << sleep_time << "s\n";
+        // sleep(sleep_time);
     }
 }
 
 int main(int argc, char* argv[]) {
+
+    // freopen("client.log","w",stdout);
 
     coor_node_id_apply_ptr = new ClientForId;
     coor_node_id_apply_ptr->init(argv[1]);
@@ -52,7 +54,7 @@ int main(int argc, char* argv[]) {
         std::thread sender(execute_trsanction, atoi(argv[2]));//16个线程在一个计算节点执行事务
         sender.detach();
     }
-    sleep(200);
+    sleep(20000);
     
     return 0;
 }

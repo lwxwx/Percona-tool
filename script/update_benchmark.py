@@ -107,7 +107,7 @@ if(update_bench_load == 1):
     conn.close()
 else:
     try:  
-        print("[",time.asctime(time.localtime(time.time())),"]start test",time_s,"sec...")
+        print("[",time.strftime("%H:%M:%S", time.localtime()),"]start test",time_s,"sec...")
         threads =[]
         for i in range (0,thread_num):
             thread=threading.Thread(target=update_run,kwargs={"thread_id":i})
