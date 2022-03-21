@@ -28,6 +28,7 @@
 extern std::mutex id_lock;
 extern int64_t s_id, m_id;
 extern int32_t part_id;
+extern int trx_num;
 /**
  * each part communicate for lastest tsn 
  */
@@ -81,7 +82,7 @@ class ClientForId
         // void HandleIDcreResponse(brpc::Controller* cntl,IDIncrement::IDResponse* response);
 
     public:
-        int init(std::string addr);
+        int init(std::string addr, int part);
         int send_id_request();
 };
 

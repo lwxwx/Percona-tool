@@ -20,7 +20,7 @@ using namespace std;
 
 DEFINE_string(protocol, "baidu_std", "Protocol type. Defined in src/brpc/options.proto");
 DEFINE_string(connection_type, "", "Connection type. Available values: single, pooled, short");
-DEFINE_string(server, "10.11.6.119:60006", "IP Address of server");
+DEFINE_string(server, "10.24.1.189:60006", "IP Address of server");
 DEFINE_string(load_balancer, "", "The algorithm for load balancing");
 DEFINE_int32(timeout_ms, 900000000, "RPC timeout in milliseconds");
 DEFINE_int32(max_retry, 5, "Max retries(not including the first RPC)"); 
@@ -40,7 +40,8 @@ void HandleIDcreResponse(brpc::Controller* cntl,IDIncrement::IDResponse* respons
         cout << "Fail to send EchoRequest, " << cntl->ErrorText()<<endl;
         return;
     }
-    cout<<"Received id : "<<response->message()<<endl;
+    // cout<<"Received id : "<<response->message()<<endl;
+    if(response->message() == "320") cout << (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count() << std::endl;
     unique_lock<std::mutex> lock(mute);
     // cnt++;
     // if(cnt == num)
@@ -84,6 +85,7 @@ int main(int argc, char* argv[]) {
 
     // Send a request 
     int log_id = 0;
+    std::cout << (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count() << std::endl;
     // while (!brpc::IsAskedToQuit()) {
     for(int i=0;i<num;i++){
         // We will receive response synchronously, safe to put variables on stack.
@@ -110,7 +112,7 @@ int main(int argc, char* argv[]) {
 
     //cout <<(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count()<<endl;
 
-    // sleep(120);
+    sleep(120);
     cout<<"Client is going to quit"<<endl;
     return 0;
 }

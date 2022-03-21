@@ -53,12 +53,16 @@ int main(int argc, char* argv[]) {
     std::thread allocator(id_allocator_run);
     allocator.detach();    
 
-    std::string pn_addr[] = {"10.24.1.27:60087"};
+    std::vector<std::string> pn_addr;//分区协调节点哎
+    pn_addr.push_back("10.24.1.189:60087");
+    // pn_addr.push_back("10.24.1.189:60088");
+    // pn_addr.push_back("10.24.1.189:60089");
     if(part_id == 0)
     {
         std::cout << "part 0" << std::endl;
-        for(int i = 0; i < 1; i++)
+        for(int i = 0; i < pn_addr.size(); i++)
         {
+            std::cout << pn_addr[i] << ",";
             ClientForCoor* coor_node_id_heartbeat_send_message_ptr_tmp = new ClientForCoor;
             coor_node_id_heartbeat_send_message_ptr_tmp->init(pn_addr[i]);
             coor_node_id_heartbeat_send_message_ptr_list.push_back(coor_node_id_heartbeat_send_message_ptr_tmp);

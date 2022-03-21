@@ -9,11 +9,12 @@
 
 #include "coor_server.h"
 
-int DEBUG_CODE = 1;
+int DEBUG_CODE = 0;
 
 std::mutex id_lock;
 int64_t s_id = 0, m_id = 0;
 int32_t part_id;
+int trx_num = 0;
 
 ServerForId *coor_node_id_allocator_ptr;
 std::vector<ClientForCoor*> coor_node_id_heartbeat_send_message_ptr_list;
@@ -148,8 +149,9 @@ int ServerForCoor::run()
 /**
  * id allocator 
  */
-int ClientForId::init(std::string addr)
+int ClientForId::init(std::string addr, int part)
 {
+    part_id = part;
     brpc::ChannelOptions c_options;
     c_options.timeout_ms=-1;
     c_options.connect_timeout_ms=-1;
@@ -169,13 +171,19 @@ void HandleIDcreResponse(brpc::Controller* cntl,IDIncrement::IDResponse* respons
         std::cout << "Fail to send EchoRequest, " << cntl->ErrorText() << std::endl;
         return;
     }
+    if((response->part_id() != 0 && response->s_id() == trx_num) || (response->part_id() == 0 && response->m_id() == trx_num)) 
+        std::cout<<"[CLIENT GET ID : " << (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count() << " ] id = "
+            <<response->part_id()<< "-" << response->s_id() << "-" <<response->m_id() << std::endl;
     if(DEBUG_CODE != 0)
     {
-        std::cout<<"[CLIENT GET ID] id = "<<response->part_id()<< "-" << response->s_id() << "-" <<response->m_id() << std::endl;
-        std::cout << "for p0 either_part_tsn.size() =  " << response->either_part_tsn_size() << " : ";
-        for(auto it = response->either_part_tsn().begin(); it != response->either_part_tsn().end(); it++)
-            std::cout << it->first << " - " << it->second << ", ";
-        std::cout << std::endl;
+        std::cout<<"[CLIENT GET ID : " << (std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch())).count() << " ] id = "<<response->part_id()<< "-" << response->s_id() << "-" <<response->m_id() << std::endl;
+        if(response->part_id() == 0)
+        {
+            std::cout << "for p0 either_part_tsn.size() =  " << response->either_part_tsn_size() << " : ";
+            for(auto it = response->either_part_tsn().begin(); it != response->either_part_tsn().end(); it++)
+                std::cout << it->first << " - " << it->second << ", ";
+            std::cout << std::endl;
+        }
     }
 }
 
@@ -186,7 +194,7 @@ int ClientForId::send_id_request()
     IDIncrement::IDResponse* response = new IDIncrement::IDResponse();
     brpc::Controller* cntl = new brpc::Controller();
     request.set_page_table_no("request id");
-    cntl->set_timeout_ms(1000);
+    cntl->set_timeout_ms(-1);
     if(DEBUG_CODE != 0)
     {
         std::cout << "send id\n";
