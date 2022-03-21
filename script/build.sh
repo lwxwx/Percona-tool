@@ -7,6 +7,6 @@
 
 # ROOT_PATH=$( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )/..
 
-PERCONA_PATH=${HOME}/percona
+PERCONA_PATH=${HOME}/git/percona
 
 BUILD_PATH=${PERCONA_PATH}/build

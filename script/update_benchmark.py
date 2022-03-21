@@ -45,15 +45,16 @@ def update_run(thread_id):
     conn = pymysql.connect(host='127.0.0.1', port=port, user=user, passwd=password)
     cursor = conn.cursor()
     cursor.execute('use test')
-    # while((datetime.datetime.now()-thread_begin).total_seconds()<time_s):     
-    for kk in range(0,sql_cnt):
+    while((datetime.datetime.now()-thread_begin).total_seconds()<time_s):     
+    # for kk in range(0,sql_cnt):
         try:
             # conn = POOL.connection()
             # cursor = conn.cursor(pymysql.cursors.DictCursor)
-            sql_for_update="update test"+str(operation_id%6)+" set val='"+str(thread_id+cnt)+"' where ID="+str(thread_id+1)+";"
+            sql_for_update="update test"+str(operation_id)+" set val='"+str(thread_id+cnt)+"' where ID="+str(thread_id+70)+";"
             # sql_for_update="update test"+str(thread_id*5)+" set val='"+str(thread_id+cnt)+"' where ID="+str(thread_id+1)+";"
             # print(sql_for_update)
             # sql_for_update="update test6 set val='"+str(thread_id+cnt)+"' where ID=8;"#+str(thread_id+1)+";"
+            # time.sleep(random.randint(5,30)/1000000.0)
             trx_begin=datetime.datetime.now()
             result_update = cursor.execute(sql_for_update)
         except Exception as e:
@@ -121,7 +122,7 @@ else:
     sum_trx_time=0.0
     sum_trx_count=0
     for i in range (0,thread_num):
-        print(list_thread_item[i]['count']," ",list_thread_item[i]['time']," ",list_thread_item[i]['trx_time'])
+        print("trx_count = ", list_thread_item[i]['count'],", thread_time = ",list_thread_item[i]['time'],", trx_time = ",list_thread_item[i]['trx_time'])
         # if(list_thread_item[i]['time']<time_s):
         #     print ("thread ",i," exit early at ",list_thread_item[i]['time'])
         sum_trx_time=(sum_trx_time+list_thread_item[i]['trx_time'])
